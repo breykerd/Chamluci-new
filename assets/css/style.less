@@ -1,4 +1,10 @@
 
+/* fonts */
+@font-face {
+    font-family: Comfortaa;
+    src: url(../fonts/Comfortaa-Regular.woff2);
+    //font-display: swap
+}
 /* color palet */
 @colorPrimaryOne: #afca52;
 @colorPrimaryTwo:#00aff1;
@@ -7,6 +13,88 @@
 @colorSecundarythree:#ffffff;
 @colorSecundaryFour:#121212;
 
+/* configuracion general*/
+body{
+	font-family: Comfortaa;
+}
+
+.container{
+	width: 1170px;
+	padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+	margin-left: auto;
+	
+	&:before{
+		display: table;
+		content: "";
+	}
+}
+
+.row{
+	margin-right: -15px;
+	margin-left: -15px;
+	&:before{
+		display: table;
+		content: "";
+	}
+}
+
+a{
+	color: @colorSecundarythree;
+	text-decoration: none;
+
+}
+
+/* fin configuracion inicial*/
+
+
+/* inicio estilos del menu*/
+.site-header{
+	position: relative;
+	z-index: 999;
+}
+
+.top-bar{
+	color: @colorSecundarythree;
+	padding: 10px 0;
+	background-color: @colorSecundaryOne;
+}
+
+.top-bar .fa{
+	vertical-align: middle;
+    background-color: rgba(0, 0, 0, .08);
+    border: 1px solid rgba(0, 0, 0, .01);
+    padding: 3px;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+}
+
+.wt-topbar-center{
+text-align: center !important;
+width: 1170px;
+	&:before{
+		display: table;
+		content: "";
+	}
+}
+
+.site-header ul > li{
+	display: inline-block;
+	list-style: none;
+
+}
+
+
+
+
+
+
+
 .menu{
 	background: @colorSecundaryTwo;
 }
@@ -14,14 +102,15 @@
 .menu li{
 	align-items: center;
 	list-style: none;
-	//position: relative;
 	display: inline-block;
 	padding: 15px;
 	
 }
 
 
-.productos{
+.menu .productos{
 	background: @colorPrimaryOne;
 	color: @colorSecundarythree;
 }
+
+/* fin estilo del menu*/
