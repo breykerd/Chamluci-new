@@ -19,7 +19,7 @@ body{
 }
 
 .container{
-	width: 1170px;
+	width: 80%;
 	padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -45,11 +45,25 @@ a{
 	text-decoration: none;
 
 }
+.shadow{
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(40,69,97,1);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(40,69,97,1);
+	box-shadow: 0px 0px 15px 0px rgba(40,69,97,1);
+}
+
+.hoverButtom{
+	background-color: @colorPrimaryTwo;
+	transition: all 0.2s ease-in-out;
+}
 
 /* fin configuracion inicial*/
 
 
 /* inicio estilos del menu*/
+.header{
+	background-color: @colorSecundaryTwo;
+}
+
 .site-header{
 	position: relative;
 	z-index: 999;
@@ -98,19 +112,74 @@ width: 1170px;
 .menu{
 	background: @colorSecundaryTwo;
 }
-
+.menu ul{
+	display: flex;
+	justify-content: center;
+}
 .menu li{
 	align-items: center;
 	list-style: none;
 	display: inline-block;
 	padding: 15px;
+	margin: 10px;
+
 	
 }
 
-
-.menu .productos{
+.menu .secciones{
+	font-size: 25px;
+	
+	& a{
+		color: @colorPrimaryTwo;
+	};& a:hover{
+ color: @colorPrimaryOne;
+ transition: all .2s ease-in-out;
+	}
+}
+.menu .productos {
 	background: @colorPrimaryOne;
 	color: @colorSecundarythree;
+	border-radius:17px 17px 17px 17px;
+	font-size: 30px;
+	&:hover{
+		.hoverButtom;
+	}
+}
+
+.logo-Header{
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	float: left;
+
+	& img{
+		width: 60%;
+	}
+}
+.busqueda{
+	padding-top: 50px;
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	//float: left;
+}
+
+.inferior{
+	margin-top: 20px;
 }
 
 /* fin estilo del menu*/
+.buttom{
+	background-color: @colorPrimaryOne;
+	color: @colorSecundarythree;
+	font-size: 25px;
+	border-radius:15px 15px 15px 15px;
+	border-style: none;
+	padding: 13px;
+	.shadow;
+	&:hover{
+		.hoverButtom;
+	}&:active{
+		background-color: @colorSecundaryOne;
+	}
+}
