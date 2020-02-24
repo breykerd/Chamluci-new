@@ -52,19 +52,21 @@
 </div>
 <div class="row">
 	<div class="inferior menu"> 
-		<ul>
+		<ul class="menu-inferior">
 			<li class="secciones"><a href="">Inicio</a></li>
 			<li class="secciones"><a href="">La Empresa</a></li>
 			<li class="productos"><a href="">Productos</a> </li>
 			<li class="secciones"><a href="">Blogs</a></li>
 			<li class="secciones"><a href="">Contactos</a></li>
-		</ul>
+		</ul>	
+		<div class="carrito">
+			<div class="cantidad">
+				<a href="Cotizacion" class="fa fa-shopping-cart"></a>
+				<div class="circulo">5</div>
+				
+				</div>
 	</div>
-	<div class="carrito">
-<i class="fa fa-shopping-cart"></i>
-<div class="cantidad">
-5
-</div>
+
 	</div>
 	
 	</div>
