@@ -35,9 +35,16 @@
 	<div class="Superior">
 		<div class="logo-Header"> <img src="assets/images/logo.png" alt=""></div>
 		<div class="busqueda"><input type="text"> <i class="fa fa-search"></i> </div>
-		<div></div>
-		<div class="central"></div>
-		<div class="redes sociales"></div>
+<div class="division">
+&nbsp;
+</div>
+		<div class="central"><i class="fa fa-phone"></i><input type="text" value="01-222 2312" disabled> </div>
+		<div class="redes-sociales">
+			<i class="fa fa-facebook-square"></i>
+			<i class="fa fa-twitter"></i>
+			<i class="fa fa-youtube"></i>
+			<i class="fa fa-instagram"></i>
+		</div>
 
 	</div>
 
