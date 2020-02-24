@@ -22,6 +22,7 @@
 }
 body{
 	font-family: Comfortaa;
+	margin: 0;
 }
 
 .container{
@@ -87,8 +88,14 @@ a{
 
 .top-bar{
 	color: @colorSecundarythree;
-	padding: 10px 0;
+	padding: 1%;
 	background-color: @colorSecundaryOne;
+	& ul{
+		margin-block-start: 0;
+		margin-block-end: 0;
+margin-inline-start: 0;	
+margin-inline-end: 0;
+}
 }
 
 .top-bar .fa{
@@ -141,7 +148,7 @@ text-align: center !important;
 }
 
 .menu .secciones{
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 600;
 	& a{
 		color: @colorPrimaryTwo;
@@ -154,7 +161,7 @@ text-align: center !important;
 	background: @colorPrimaryOne;
 	color: @colorSecundarythree;
 	border-radius:17px 17px 17px 17px;
-	font-size: 25px;
+	font-size: 20px;
 	font-weight: 600;
 	&:hover{
 		.hoverButtom;
@@ -162,7 +169,7 @@ text-align: center !important;
 }
 
 .logo-Header{
-	width: 25%;
+	width: 20%;
 	display: flex;
 	justify-content: center;
 	float: left;
@@ -172,8 +179,7 @@ text-align: center !important;
 	}
 }
 .busqueda{
-	padding-top: 30px;
-	width: 20%;
+	width: 25%;
 	display: flex;
 	justify-content: left;
 	float: left;
@@ -183,7 +189,7 @@ text-align: center !important;
 		padding: 10px;
 		border-style: none;
 		font-size: 20px;
-		width: 70%;
+		width: 100%;
 
 	}& i{
 		background-color: @colorPrimaryOne;
@@ -200,23 +206,25 @@ text-align: center !important;
 }
 
 .division{
-width: 15.8%;
+width: 14%;
 display: flex;
 float: left;
 }
 .central{
-	padding-top: 30px;
-	width: 25%;
+	width: 20%;
 	display: flex;
+	justify-content: flex;
 	float: left;
-	justify-content: left;
-	& input{
+	& a{
 		.shadowTwo;
 		border-radius:0 0 15px 0;
-		padding: 10px;
-		border-style: none;
+		padding-top: 3%;
+		padding-inline-start: 10px;
 		font-size: 20px;
-		width: 70%;
+		background-color: @colorSecundarythree;
+		color: @colorSecundaryOne;
+		width: 100%;
+		margin-left: ;
 
 	}& i{
 		background-color: @colorPrimaryOne;
@@ -234,32 +242,39 @@ float: left;
 }
 
 .redes-sociales{
-	padding-top: 30px;
-	justify-content: flex-end;
+	display: flex;
+	justify-content: center;
+	float: none;
+	width: 15%;
 }& i{
 		background-color: @colorPrimaryOne;
 		color: @colorSecundarythree;
-		font-size: 25px !important;
+		font-size: 20px !important;
 		display: flex;
    		justify-content: center;
    		align-items: center;
-   		padding: 10px;
+		padding: 10px;
    		border-radius:7px 7px 7px 7px;
    		 &:hover{
 	   		.hoverButtom;
    		}&:active{
 			background-color: @colorSecundaryOne;
-			}
+		}&.iconSocial{
+		margin-left: 5px;
+
+		}
 }
 	
-
+.Superior{
+	padding-top: 1.5%;
+}
 
 .seccion-superior{
- width: 25%;
+ width: 20%;
 }
 
 .inferior{
-	margin-top: 15px;
+	margin-top: 0px;
 }
 
 /* fin estilo del menu*/
