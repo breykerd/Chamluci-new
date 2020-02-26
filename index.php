@@ -155,13 +155,28 @@
 			</div>
 		</div>
 		<div class="body-panel">
-			<div class="col-1/4">
 
+<?php 
+for ($i= 1; $i<=8; $i++)
+{
+?>
+			<div class="col-1-4">
+				<img src="assets/images/imagen-4.png" alt="">
+				<button class="buttom">
+					cotizar
+
+				</button>
 			</div>
+
+<?php }; ?>
 
 		</div>
 
 	</div>
+</div>
+
+<div class="separador-full-2">
+
 </div>
 <br>
 <br>
@@ -177,7 +192,7 @@
 <br>
 <br>
 <br>
-<br>ss
+<br>
 
 <script src="assets/js/functions.js"> </script>
 </body>
