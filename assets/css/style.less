@@ -53,14 +53,14 @@ a{
 
 }
 .shadow{
-	-webkit-box-shadow: 0px 0px 15px 0px rgba(40,69,97,1);
-	-moz-box-shadow: 0px 0px 15px 0px rgba(40,69,97,1);
-	box-shadow: 0px 0px 15px 0px rgba(40,69,97,1);
-}
-.shadowTwo{
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(40,69,97,1);
 	-moz-box-shadow: 0px 0px 10px 0px rgba(40,69,97,1);
 	box-shadow: 0px 0px 10px 0px rgba(40,69,97,1);
+}
+.shadowTwo{
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(40,69,97,1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(40,69,97,1);
+	box-shadow: 0px 0px 5px 0px rgba(40,69,97,1);
 }
 .shadowIcon{
 	-webkit-box-shadow: 3px 0px 10px 0px rgba(40,69,97,1);
@@ -100,8 +100,10 @@ a{
 
 .top-bar{
 	color: @colorSecundarythree;
-	padding: 1%;
+	padding: 0.5%;
 	background-color: @colorSecundaryOne;
+	font-weight: 700;
+	font-size: 15px;
 	& ul{
 		margin-block-start: 0;
 		margin-block-end: 0;
@@ -184,7 +186,6 @@ a{
 		background-color: @colorSecundarythree;
 		color: @colorSecundaryOne;
 		width: 100%;
-		margin-left: ;
 
 	}& i{
 		background-color: @colorPrimaryOne;
@@ -264,29 +265,33 @@ a{
 	}
 }
 .menu-inferior{
-	width: 80%;
+	width: 63%;
 	justify-content: left;
 }
 /*icono carrito*/
 .carrito{
-	width: 20%;
+	width: 12%;
+	padding-top: 1%;
 	
 	& .cantidad{
-		border-radius:17px 17px 17px 17px;
-		font-size: 25px;
+		border-radius:10px 10px 10px 10px;
+		font-size: 23px;
 		color: @colorSecundarythree;
-		padding:5%;
+		padding:6%;
 		width:40%;
 		margin-top: 10%;
 		background-color: @colorPrimaryOne;
+		.shadow
 	}
 	//margin-top: 30px;
 	& .circulo{
+		font-size: 20px;
 		color: red;
-		margin-left: 0%;
+		margin-left: 15%;
 		display: inline;
-		padding: 10%;
+		padding:5% 10% 5% 10%;
 		border-radius:50%;
+		font-weight: 600;
 		background-color: @colorSecundarythree;
 	 
 	}
@@ -305,7 +310,14 @@ a{
 
 
 
+/* inicio slider */
 
+.slider{
+	height: 460px;
+	background-color: @colorPrimaryTwo;
+}
+
+/* fin slider*/
 
 
 

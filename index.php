@@ -34,7 +34,7 @@
 
 	<div class="Superior">
 		<div class="logo-Header"> <img src="assets/images/logo.png" alt=""></div>
-		<div class="busqueda"><input type="text"> <i class="fa fa-search"></i> </div>
+		<div class="busqueda"><input type="text" placeholder="Busqueda"> <i class="fa fa-search"></i> </div>
 <div class="division">
 &nbsp;
 </div>
@@ -62,7 +62,7 @@
 		<div class="carrito">
 			<div class="cantidad">
 				<a href="Cotizacion" class="fa fa-shopping-cart"></a>
-				<div class="circulo">5</div>
+				<div class="circulo">0</div>
 				
 				</div>
 	</div>
@@ -72,7 +72,13 @@
 	</div>
 </div>
 </header>
+<div class="slider">
+s
+</div>
 <!-- end custom menu --> 
+<br>
+<br>
+<br>
 <div>
 	<button class="buttom">Cotización</button>
 </div>
