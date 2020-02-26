@@ -378,7 +378,7 @@ margin-bottom: 0;
 	&:after{
 	content: "";
 	position: absolute;
-	left: -55%;
+	left: -58%;
     z-index: 1;
 	background: @colorPrimaryTwo;
     display: block;
@@ -393,7 +393,7 @@ margin-bottom: 0;
 }
 
 .mensajeNewsletter{
-	width: 58%;
+	width: 55%;
 	position: relative;
 	z-index: 5;
 	padding: 2%;
@@ -416,8 +416,6 @@ margin-bottom: 0;
 	color: @colorSecundarythree;
 	& h4{
 		margin-bottom: 0;
-	}& p{
-		
 	}
 	}
 	
@@ -434,12 +432,97 @@ margin-bottom: 0;
 /* fin newsletter */
 
 
+/* inicio categorias destacadas */
+.header-panel{
+
+
+.separador{
+	
+	display: inline-block;
+	height: 3px;
+	width: 50px;
+	position: relative;
+	& .separator-left{
+		left: -800%;
+		position: absolute;
+		top: 50%;
+		width: 800%;
+		height: 3px;
+		margin-top: -1px;
+		background-color: @colorPrimaryTwo;
+	} 
+	& .separator-right{
+		position: absolute;
+		right: -800%;
+		top: 50%;
+		width: 800%;
+		height: 3px;
+		margin-top: -1px;
+		background-color: @colorPrimaryTwo;
+	}
+	& i {
+		background-color: inherit;
+		color: @colorPrimaryTwo;
+		padding: 0;
+		font-size: 30px !important;
+	}
+}
+& h2{
+	font-size: 30px;
+	color: @colorPrimaryTwo;
+}
+}
 
 
 
 
+.body-panel{
+	margin-top: 5%;
+	margin-left: 10%;
+	margin-right: 10%;
+	& .columna-1{
+		width: 40%;
+		display: flex;
+		float: left;
+		margin-right: 5%;
+		position: relative;
+		background-color: @colorSecundaryTwo;
+		height: 400px;
+		.shadow;
+	}
+	& .columna-2{
+		display: flex;
+		position: relative;
+		width: 55%;
+		height: 400px;
+		& .fila-1{
+			height: 190px;
+			width: 100%;
+			position: relative;
+			.shadow
+		}
+		& .fila-2{
+			margin-top: 210px;
+			height: 190px;
+			width: 100%;
+			position: absolute;
+			.shadow
+		}
+	}
+}
+/* fin categorias destacadas */
 
 
+
+
+/* separador */
+.separador-full{
+	margin-top: 30px;
+	height: 132px;
+	background-repeat: no-repeat;
+	background-image: url('../images/Degradado.png') ;
+}
+/* fin separador */
 
 
 
@@ -469,7 +552,7 @@ margin-bottom: 0;
 	padding: 10px;
 	border-style: none;
 	font-size: 20px;
-	width: 100%;
+	width: 80%;
  }
 .iconInput{
 	background-color: @colorPrimaryOne;
@@ -483,3 +566,8 @@ margin-bottom: 0;
    		.shadowIcon;
 }
 /* final cajade texto con icono */
+
+/* texto centrado */ 
+.text-center{
+	text-align: center;
+}

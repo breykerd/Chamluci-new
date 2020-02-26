@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+
 	<title>Corporación Chamluci - Líderes en línea institucional</title>
+	<link rel="icon" href="assets/images/favicon.ico" type="iage/ico">
 	<link rel="stylesheet/less" type="text/css" href="assets/css/style.less" />
 	<link rel="stylesheet/less" type="text/css" href="assets/css/responsive.less" />
 	<link rel="stylesheet/less" type="text/css" href="assets/fonts/fontawesome/css/font-awesome.min.css" />
@@ -72,9 +74,13 @@
 	</div>
 </div>
 </header>
+<!-- end custom menu --> 
+<!-- start slider --> 
 <div class="slider">
-s
+
 </div>
+<!-- end slider -->
+<!-- start newsletter -->  
 <div class="newsletter">
 	<div class="container">
 		<div class="row">
@@ -103,24 +109,75 @@ s
 	</div>
 
 </div>
-<!-- end custom menu --> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div>
-	<button class="buttom">Cotización</button>
+<!-- end newsletter--> 
+
+
+<div class="container">
+	<div class="row">
+		<div class="header-panel text-center">
+			<h2>Categorías Destacadas</h2>
+			<div class="separador">
+				<span class="separator-left"></span>
+				<i class="fa fa-object-group fa-2x"></i>
+				<span class="separator-right"></span>
+			</div>
+		</div>
+		<div class="body-panel">
+			<div class="columna-1">
+
+			</div>
+			<div class="columna-2">
+				<div class="fila-1">
+
+				</div>
+				<div class="fila-2">
+
+				</div>
+
+			</div>
+			
+		</div>
+	</div>
 </div>
 
+<div class="separador-full">
+
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="header-panel text-center">
+			<h2>Productos Destacados</h2>
+			<div class="separador">
+				<span class="separator-left"></span>
+				<i class="fa fa-pied-piper-pp fa-2x"></i>
+				<span class="separator-right"></span>
+			</div>
+		</div>
+		<div class="body-panel">
+			<div class="col-1/4">
+
+			</div>
+
+		</div>
+
+	</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>ss
 
 <script src="assets/js/functions.js"> </script>
 </body>
