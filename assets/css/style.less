@@ -12,6 +12,8 @@
 @colorSecundaryTwo:#f4f4f4;
 @colorSecundarythree:#ffffff;
 @colorSecundaryFour:#121212;
+@colorSecundaryFive:#A1C3E4;
+@colorGradient:linear-gradient(50deg, rgba(0,175,241,1) 0%, rgba(40,69,97,1) 100%);
 @colorthree: #111111;
 
 /* configuracion general*/
@@ -23,6 +25,7 @@
 body{
 	font-family: Comfortaa;
 	margin: 0;
+	background-color: @colorSecundaryTwo;
 }
 
 .container{
@@ -228,6 +231,42 @@ a{
 
 /* inicio menu inferior */
 
+.nav-is-stuck {
+& .top-bar{
+	display: none;
+}
+& .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+	animation: stickAnim .3s;
+
+	
+}
+& .menu-inferior{
+margin-top: 0;
+margin-bottom: 0;
+}
+
+& .carrito{
+	padding-top: 0;
+}
+
+}
+
+@keyframes stickAnim {
+	0% {
+		transform: translateY(-20%);
+	}
+	
+	100% {
+		transform: translateY(0);
+	}
+}
+
+
 .menu{
 	background: @colorSecundaryTwo;
 	display: flex;
@@ -264,6 +303,13 @@ a{
 		}
 	}
 }
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
+
+ 
 .menu-inferior{
 	width: 63%;
 	justify-content: left;
@@ -297,8 +343,11 @@ a{
 	}
 }
 
+/* end  carrito */
 
-/* end icono carrito */
+
+
+
 
 
 /*fin menu inferior*/
@@ -314,13 +363,75 @@ a{
 
 .slider{
 	height: 460px;
-	background-color: @colorPrimaryTwo;
+	background: @colorGradient;
 }
 
 /* fin slider*/
 
 
+/* inicio nessletter */
 
+.newsletter{
+	background-color: @colorSecundaryFive;
+	height: 150px;
+	position: relative;
+	&:after{
+	content: "";
+	position: absolute;
+	left: -55%;
+    z-index: 1;
+	background: @colorPrimaryTwo;
+    display: block;
+    height: 100%;
+    box-shadow: 0 0 8px -5px @colorSecundaryOne;
+    -webkit-box-shadow: 0 0 8px -5px @colorSecundaryOne;
+    -moz-box-shadow: 0 0 8px -5px @colorSecundaryOne;
+    border-radius: 0 0 105px 0;
+    width: 2000px;
+
+	}
+}
+
+.mensajeNewsletter{
+	width: 58%;
+	position: relative;
+	z-index: 5;
+	padding: 2%;
+	display: flex;
+	float: left;
+	& i{
+		background-color: inherit;
+		font-size: 45px !important;
+	}& .icono{
+		align-items: center;
+		padding-left: 40%;
+		display: flex;
+		float: left;
+	}
+	
+	& .texto {
+		padding-top: 0;
+	padding-left: 60%;
+	width: 100%;
+	color: @colorSecundarythree;
+	& h4{
+		margin-bottom: 0;
+	}& p{
+		
+	}
+	}
+	
+}
+.suscripcion{
+	margin-top: 1.5%;
+	width: 30%;
+	padding: 2%;
+	position: relative;
+	z-index: 10;
+	display: flex;
+	float: left;
+}
+/* fin newsletter */
 
 
 
@@ -350,3 +461,25 @@ a{
 	}
 }
 /* fin estilo de boton call to action */
+
+/* inicio caja de texto con icono*/
+ .inputIcon{
+	.shadowTwo;
+	border-radius: 15px 0 0 0;
+	padding: 10px;
+	border-style: none;
+	font-size: 20px;
+	width: 100%;
+ }
+.iconInput{
+	background-color: @colorPrimaryOne;
+		color: @colorSecundarythree;
+		font-size: 20px;
+		display: flex;
+   		justify-content: center;
+   		align-items: center;
+   		padding: 10px;
+   		border-radius:0  0 15px 0;
+   		.shadowIcon;
+}
+/* final cajade texto con icono */

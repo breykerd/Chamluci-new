@@ -26,7 +26,7 @@
 		</div>
 	</div>
 	<!-- -------------------- -->
-<div class="header">
+<div id="header" class="header">
 
 
 <div class="container">
@@ -75,7 +75,45 @@
 <div class="slider">
 s
 </div>
+<div class="newsletter">
+	<div class="container">
+		<div class="row">
+
+<div class="mensajeNewsletter">
+	<div class="Contenido">
+		
+	<div class="icono">
+		<i class="fa fa-clipboard"></i>
+	</div>
+	<div class="texto">
+	<h4>
+	RECIBE NUESTRAS OFERTAS
+	</h4>
+	<p>
+	Esta al tanto de nuestros nuevos productos
+	</p>
+	</div>
+	</div>
+</div>
+<div class="suscripcion">
+<input type="text" class="inputIcon"><i class="fa fa-paper-plane-o iconInput"></i>
+</div>
+		</div>
+
+	</div>
+
+</div>
 <!-- end custom menu --> 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
@@ -83,5 +121,7 @@ s
 	<button class="buttom">Cotización</button>
 </div>
 
+
+<script src="assets/js/functions.js"> </script>
 </body>
 </html>
