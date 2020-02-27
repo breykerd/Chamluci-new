@@ -178,6 +178,40 @@ for ($i= 1; $i<=8; $i++)
 <div class="separador-full-2">
 
 </div>
+
+<div class="container">
+	<div class="row">
+		<div class="body-panel">
+		
+			<div class="col-1-2">
+			<img src="assets/images/Nosotros.png" alt="">
+			</div>
+			<div class="col-1-2">
+				<div class="separador1">
+					<i class="fa fa-object-ungroup"></i> <span class="separator-right"></span>
+				
+				 	
+				</div>
+			<h2>
+				Sobre Nosotros
+			</h2>
+			<p>
+			Somos una Empresa Importadora y Comercializadora de productos de línea institucional e implementos de limpieza que desea colocarse a su disposición y ser una alternativa de solución a sus requerimientos, encargándonos de sus necesidades de forma integral.
+			</p>
+			<div class="separador1">
+				
+				 	<span class="separator-left"></span><i class="fa fa-object-ungroup"></i>
+				</div>
+			</div>
+		</div>
+	
+	
+	</div>
+
+
+</div>
+
+
 <br>
 <br>
 <br>

@@ -25,7 +25,7 @@
 body{
 	font-family: Comfortaa;
 	margin: 0;
-	background-color: @colorSecundaryTwo;
+	background-color: @colorSecundarythree;
 }
 
 .container{
@@ -473,9 +473,6 @@ margin-bottom: 0;
 }
 }
 
-
-
-
 .body-panel{
 	margin-top: 5%;
 	margin-left: 10%;
@@ -510,8 +507,70 @@ margin-bottom: 0;
 			.shadow
 		}
 	}
+	& h2{
+		font-size: 30px;
+	color: @colorPrimaryTwo;
+	text-align: center;
+	padding-top: 3%;
+	}
+	& p{
+		margin:5% 10% 10% 20% ;
+
+		text-align: left;
+		font-size: 16px;
+	}
 }
 /* fin categorias destacadas */
+
+
+/* inicio area nosotros */
+
+/* index */
+.separador1{
+	display: flex;
+	position: relative;
+	float: left;
+	width: 90%;
+	margin-left: 10%;
+	.separator-left{
+		
+		position: relative;
+		left: 0%;
+		top: 50%;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 2.5%;
+		height: 2px;
+		margin-top: 10px;
+		background-color: @colorPrimaryTwo;
+	} 
+	& .separator-right{
+		position: relative;
+		right: -2%;
+		top: 50%;
+		width: 90%;
+		margin-left: 2.5%;
+		margin-right: 7.5%;
+		height: 2px;
+		margin-top: 10px;
+		background-color: @colorPrimaryTwo;
+	}
+	& i {
+		margin-left:2.5% ;
+		margin-right: 2.5%;
+		background-color: inherit;
+		color: @colorPrimaryTwo;
+		padding: 0;
+		font-size: 20px !important;
+	}
+}
+
+/* index */
+
+
+
+/* fin area nosotros */
+
 
 /* columnas personalizadas */
 
@@ -534,6 +593,19 @@ margin-bottom: 0;
 
 	}
 
+}
+.col-1-2{
+	
+	position: relative;
+	//display: flex;
+	float: left;
+	width: 48%;
+	margin: 1%;
+	//.shadow;
+	& img{
+		width: 90%;
+		margin-left: 5%;
+	}
 }
 /* fin columnas personalizadas */
 
