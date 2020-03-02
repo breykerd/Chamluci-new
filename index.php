@@ -140,8 +140,8 @@
 	</div>
 </div>
 
-<div class="separador-full">
-
+<div class="separador-full text-center">
+<h2>Encuentra lo que buscas en un solo lugar</h2>
 </div>
 
 <div class="container">
@@ -212,21 +212,56 @@ for ($i= 1; $i<=8; $i++)
 </div>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<footer>
+	<div class="container">
+		<div class="row body-panel">
+			<div class="col-footer-1">
+				<h4>
+					Redes Sociales
+				</h4>
+			<div class="separador1">
+					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>
+				
+				 	
+				</div>
+					<div class="redes-sociales">
+						<i class="fa fa-facebook-square iconSocial"></i>
+						<i class="fa fa-twitter iconSocial"></i>
+						<i class="fa fa-youtube iconSocial"></i>
+						<i class="fa fa-instagram iconSocial"></i>
+					</div>
+					<div class="logo-footer"> <img src="assets/images/logo.png" alt=""></div>
+
+			</div>
+			<div class="col-footer-2">
+				<h4>
+					Productos Destacados
+				</h4>
+			<div class="separador1">
+					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>
+				
+				 	
+				</div>
+			</div>
+			<div class="col-footer-3">
+			<h4>
+					Información
+				</h4>
+			<div class="separador1">
+					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>
+				
+				 	
+				</div>
+			</div>
+
+
+		</div>
+
+	</div>
+	<div class="copyright">
+
+	</div>
+</footer>
 
 <script src="assets/js/functions.js"> </script>
 </body>
