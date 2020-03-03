@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 
 	<title>Corporación Chamluci - Líderes en línea institucional</title>
-	<link rel="icon" href="assets/images/favicon.ico" type="iage/ico">
+	<link rel="icon" href="assets/images/favicon.ico" type="image/ico">
 	<link rel="stylesheet/less" type="text/css" href="assets/css/style.less" />
 	<link rel="stylesheet/less" type="text/css" href="assets/css/responsive.less" />
 	<link rel="stylesheet/less" type="text/css" href="assets/fonts/fontawesome/css/font-awesome.min.css" />
@@ -57,7 +57,9 @@
 		<ul class="menu-inferior">
 			<li class="secciones"><a href="">Inicio</a></li>
 			<li class="secciones"><a href="">La Empresa</a></li>
-			<li class="productos"><a href="">Productos</a> </li>
+			<li class="productos" onmouseover="subMenu()" onmouseout="subMenu2()"><a href="" >Productos</a> 
+			
+		</li>
 			<li class="secciones"><a href="">Blogs</a></li>
 			<li class="secciones"><a href="">Contactos</a></li>
 		</ul>	
@@ -66,13 +68,36 @@
 				<a href="Cotizacion" class="fa fa-shopping-cart"></a>
 				<div class="circulo">0</div>
 				
-				</div>
-	</div>
+			</div>
+		</div>
 
 	</div>
 	
-	</div>
 </div>
+
+
+
+</div>
+<!-- menu flotante -->
+<div class="sub-menu" id="sub-menu">
+
+
+<ul>
+				<li>
+					<h2> <a href="" class="text-primary"> Cateoria de productos con nombre exagerdamente largo</a></h2>
+				</li>
+				<li>
+				<h2> <a href="" class="text-primary"> Cateoria de productos con nombre exagerdamente largo</a></h2>
+				</li>
+				<li>
+				<h2 > <a href="" class="text-primary"> Cateoria de productos con nombre exagerdamente largo</a></h2>
+				</li>
+</ul>
+
+
+			
+		</div>
+<!-- fin menu flotante -->
 </header>
 <!-- end custom menu --> 
 <!-- start slider --> 
@@ -115,7 +140,7 @@
 <div class="container">
 	<div class="row">
 		<div class="header-panel text-center">
-			<h2>Categorías Destacadas</h2>
+			<h2>Ofertas del Mes</h2>
 			<div class="separador">
 				<span class="separator-left"></span>
 				<i class="fa fa-object-group fa-2x"></i>
@@ -219,10 +244,9 @@ for ($i= 1; $i<=8; $i++)
 				<h4>
 					Redes Sociales
 				</h4>
-			<div class="separador1">
+				<div class="separador1">
 					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>
-				
-				 	
+					
 				</div>
 					<div class="redes-sociales">
 						<i class="fa fa-facebook-square iconSocial"></i>
@@ -237,29 +261,67 @@ for ($i= 1; $i<=8; $i++)
 				<h4>
 					Productos Destacados
 				</h4>
-			<div class="separador1">
+				<div class="separador1">
 					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>
-				
-				 	
 				</div>
+
+				<?php 
+for ($i= 1; $i<=2; $i++)
+{
+?>				
+				 
+				<div class="container">
+
+
+				<div class="sub-col-1">
+					<img src="assets/images/imagen-4.png" alt="">
+				</div>
+				<div class="sub-col-2">
+					<h4>Nombre del producto extremadamente largo <?php echo $i; ?></h4>
+					<a href="#" class="text-primary"> Ver Más</a>
+				</div>
+				</div>
+				<?php }; ?>
+
+
 			</div>
+
+
 			<div class="col-footer-3">
-			<h4>
+				<h4>
 					Información
 				</h4>
-			<div class="separador1">
-					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>
-				
-				 	
+				<div class="separador1">
+					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>	
 				</div>
+
+				<?php 
+$contenido= array("Av. Santa Rosa # 424 - Santa Anita - Lima - Perú","01 - 478 0646","ventas@corporacionchamluci.com","947153316 / 934717709");	
+$icons= array("fa-map-marker","fa-phone","fa-envelope-o","fa-whatsapp");
+
+for ($i= 0; $i<=3; $i++)
+{
+?>	
+				<div class="container">
+					<div class="sub-col-1">
+							<i class="fa <?php echo $icons[$i]; ?>"> </i>
+					</div>
+					<div class=sub-col-2>
+					<a href=""><?php echo $contenido[$i]; ?></a>
+					</div>
+
+				</div>
+				<?php }; ?>
+
+
 			</div>
 
 
 		</div>
 
 	</div>
-	<div class="copyright">
-
+	<div class="copyright text-center">
+		<h4>© 2019 Corporación Chamluci S.A.C. Todos Los Derechos Reservados. Realizado Por Tecnoblack.</h4>
 	</div>
 </footer>
 

@@ -1,5 +1,24 @@
-@media (max-width: 768px)
+@media (min-width: 800px) and (max-width: 1400px)
 {
+    .container{
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .menu ul{
+        margin-left: 17.5%;
+        margin-right: 0;
+    }
+    .carrito{
+        width: 14%;
+        
+    }
+    .newsletter{
+    height: 120px;
+    &::after{
+        left: -115%;
+    }
+    }
     /* mmenu superior*/
     .busqueda{
         & input{
@@ -33,4 +52,24 @@
 
     /* fin menu superior*/
 
+    .slider{
+        height: 300px;
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1500px)
+{
+
+    .newsletter{
+        height: 120px;
+        &::after{
+            left: -110%;
+        }
+        }
+
+        .menu ul{
+            margin-left: 19%;
+            margin-right: 0;
+        }
 }
