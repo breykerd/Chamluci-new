@@ -133,7 +133,7 @@ a{
 
 
 .logo-Header{
-	width: 20%;
+	width: 17.5%;
 	display: flex;
 	justify-content: center;
 	float: left;
@@ -152,7 +152,7 @@ a{
 		border-radius:0 0 0 15px;
 		padding: 10px;
 		border-style: none;
-		font-size: 20px;
+		font-size: 15px;
 		width: 100%;
 
 	}& i{
@@ -268,12 +268,12 @@ margin-bottom: 0;
 
 
 .menu{
-	background: @colorSecundaryTwo;
+	//background: @colorSecundaryTwo;
 	display: flex;
 	width: 100%;
 
 	& ul{
-		margin-left: 23%;
+		margin-left: 20.4%;
 		margin-right: -8%;
 
 		& li{
@@ -299,9 +299,11 @@ margin-bottom: 0;
 		border-radius:17px 17px 17px 17px;
 		font-size: 20px;
 		font-weight: 600;
-		z-index: 1;
+		margin-bottom: 5px;
+		z-index: 999;
 		&:hover{
 			.hoverButtom;
+			border-radius:17px 17px 0 0;
 		}
 		
 	}
@@ -314,31 +316,73 @@ margin-bottom: 0;
 .site-header{
 
 & .sub-menu{
- display: none;
+ 	display:none;
 	 position: absolute;
-	 margin-left: 15%;
-	 z-index: 999;
-	 width: 70%;
-	 border-radius: 0 0 50px 50px;
-	 background-color: @colorSecundarythree;
-	 transition: all ease 0.5s 0s;
+	 margin-top: .9%;
+	 margin-left: -12%;
+	 z-index: 0;
+	 width: 25%;
+	 border-radius: 20px 20px 20px 20px;
+	 background-color: @colorSecundaryTwo;
+	 transition: all ease 0.5s ;
+	 .shadow;
 		& ul{
 			position: relative;
-			display: flex;
+			display: block;
 			justify-content: center;
+			margin-left: 0;
+			margin-right: 0;
+			padding-left: 0;
+
 			
 		& li {
 			padding-right: 2%;
 			padding-left: 2%;
-			text-align: center;
+			text-align: left;
+			padding: 0;
+			border-bottom: 1px solid @colorPrimaryOne ;
 			& h2{
-				font-size: 18px;
+				font-size: 16px;
+				& a.text-primary:hover{
+					color: @colorPrimaryTwo !important;
 			}
-			
+			}
+			&:last-child{
+				border-bottom: 0;
+		}
+		}
+}&:hover{
+	display: block;	
+	animation-duration: 0.5s ;
+	animation-name: ork;
 		}
 }
+animation-duration: 0.5s ;
+ animation-name: ork2;
 }
+
+
+
+
+.productos:hover > .sub-menu
+{
+	display:block;
+	animation-duration: 0.5s ;
+	animation-name: ork;
 }
+
+
+@keyframes ork{
+	from{
+		margin-top: 2%;
+		opacity: 0;
+	}
+	to{
+		margin-top: .9%;
+		opacity: 1;
+	}
+}
+
 
 .visible{
 	display: block !important;
@@ -350,6 +394,7 @@ margin-bottom: 0;
 .menu-inferior{
 	width: 63%;
 	justify-content: left;
+	background-color: inherit !important;
 }
 
 
@@ -454,6 +499,7 @@ margin-bottom: 0;
 	width: 100%;
 	color: @colorSecundarythree;
 	& h4{
+		margin-top: 6px;
 		margin-bottom: 0;
 	}
 	}

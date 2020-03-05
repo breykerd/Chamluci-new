@@ -53,7 +53,8 @@ function subMenu2(){
 	var subMenu=document.getElementById("sub-menu");
 	var clase= subMenu.classList.contains('visible');
 	if (clase==true){
-		setTimeout(remover(),3000)
+		setTimeout(remover,5000)
+		console.log("se ejecuta");
 	};
  function remover(){
 	 subMenu.classList.remove('visible');

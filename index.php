@@ -1,3 +1,8 @@
+<?php
+require('backend/backend.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -57,32 +62,11 @@
 		<ul class="menu-inferior">
 			<li class="secciones"><a href="">Inicio</a></li>
 			<li class="secciones"><a href="">La Empresa</a></li>
-			<li class="productos" onmouseover="subMenu()" onmouseout="subMenu2()"><a href="" >Productos</a> 
-			
-		</li>
-			<li class="secciones"><a href="">Blogs</a></li>
-			<li class="secciones"><a href="">Contactos</a></li>
-		</ul>	
-		<div class="carrito">
-			<div class="cantidad">
-				<a href="Cotizacion" class="fa fa-shopping-cart"></a>
-				<div class="circulo">0</div>
+			<li class="productos"  ><a href="" >Productos</a> 
+			<div class="sub-menu" id="sub-menu" >
 				
-			</div>
-		</div>
-
-	</div>
-	
-</div>
-
-
-
-</div>
-<!-- menu flotante -->
-<div class="sub-menu" id="sub-menu">
-
-
-<ul>
+			
+			<ul>
 				<li>
 					<h2> <a href="" class="text-primary"> Cateoria de productos con nombre exagerdamente largo</a></h2>
 				</li>
@@ -95,8 +79,35 @@
 </ul>
 
 
-			
+</div>
+		</li>
+			<li class="secciones"><a href="">Blogs</a></li>
+			<li class="secciones"><a href="">Contactos</a></li>
+		</ul>	
+		<div class="carrito">
+			<div class="cantidad">
+				<a href="Cotizacion" class="fa fa-shopping-cart"></a>
+				<div class="circulo" style=>0</div>
+				
+			</div>
 		</div>
+
+	</div>
+	
+</div>
+
+
+
+</div>
+<!-- menu flotante -->
+
+
+
+
+
+
+			
+		
 <!-- fin menu flotante -->
 </header>
 <!-- end custom menu --> 
