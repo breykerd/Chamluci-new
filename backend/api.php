@@ -1,6 +1,13 @@
 <?php
+
+//archivos Requeridos
 require('connection.php');
 require('backend.php');
+
+//clases Requeridas
+$Category= new Category();
+
+
 
 if(isset($_POST['Consulta'])){
     $consult=$_POST['Consulta'];
@@ -9,8 +16,9 @@ if(isset($_POST['Consulta'])){
 }
 
 switch($consult){
-    case'':
-    //codigo a ejecutar
+    case'Categoria':
+    $categoryList=$Category->categoryList();
+    echo $categoryList;
     break;
     default:
     //codigo a ejecutar

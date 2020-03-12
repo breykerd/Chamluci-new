@@ -55,6 +55,28 @@
     .slider{
         height: 300px;
     }
+  
+    .site-header{
+
+        & .sub-menu{
+            margin-left: -12%;
+        width: 35%;
+        height: 250%;
+         overflow-y: scroll;
+         overflow-x: hidden;
+
+        & ul{
+           
+            & li {
+                & h2{
+                    margin-top: 2px;
+                    font-size: 12px;
+                }
+            }
+        }
+        }
+    }
+
 
 }
 
@@ -69,7 +91,34 @@
         }
 
         .menu ul{
-            margin-left: 19%;
+            margin-left: 18%;
             margin-right: 0;
         }
+
+        
+}
+
+@media (min-width: 250px)and(max-width:440px){
+    #menu_on{
+        display: block;
+        
+    }
+    .header{
+        display: none;
+    }
+
+    .slider{
+        height: 500px;
+    }
+    .mensajeNewsletter {
+        width: 100%;
+        position: relative;
+        z-index: 5;
+         padding: 0; 
+        display: flex;
+        float: left
+    }
+    body{
+        width: 480px;
+    }
 }

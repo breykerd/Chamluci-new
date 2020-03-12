@@ -1,6 +1,16 @@
-<?php
+<?php 
+//Archivos requeridos
+require('backend/connection.php');
 require('backend/backend.php');
 
+//clases requeridas
+$Category= new Category();
+$Products= new Products();
+
+//funciones Utilizadas
+
+$categoryList=$Category->categoryList();
+$featuredProducts=$Products->featuredProducts();
 ?>
 
 <!DOCTYPE html>
@@ -9,15 +19,21 @@ require('backend/backend.php');
 	<meta charset="UTF-8">
 
 	<title>Corporación Chamluci - Líderes en línea institucional</title>
+	<script src="assets/js/apiProcess.js" ></script>
 	<link rel="icon" href="assets/images/favicon.ico" type="image/ico">
 	<link rel="stylesheet/less" type="text/css" href="assets/css/style.less" />
 	<link rel="stylesheet/less" type="text/css" href="assets/css/responsive.less" />
 	<link rel="stylesheet/less" type="text/css" href="assets/fonts/fontawesome/css/font-awesome.min.css" />
 	<script src="assets/js/less.min.js" ></script>
+	
 </head>
 <body>
 <!-- start custom menu-->	
 <header class="site-header">
+
+
+
+
 
 	<div class="top-bar">
 		<div class="container">
@@ -32,6 +48,35 @@ require('backend/backend.php');
 			</div>
 		</div>
 	</div>
+	<div class="header-2" id="header-2">
+<a href="">
+<img src="assets/images/logo.png" style="margin-top:-4%; margin-left:3%;" alt="">
+</a>
+<a href="#" id="menu_on" onClick="clases();">
+			<span></span>
+			<span></span>
+			<span></span>
+</a>
+
+	</div>
+		
+	
+
+
+
+<nav>
+<a href="">
+<img src="assets/images/logo.png" style="margin-top:-4%; margin-left:3%;" alt="">
+</a>	
+	<ul>
+		<li><a href="#">Inicio</a></li>
+		<li><a href="#">La Empresa</a></li>
+		<li><a href="#">Productos</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Contacto</a></li>
+		<li></li>
+	</ul>
+</nav>
 	<!-- -------------------- -->
 <div id="header" class="header">
 
@@ -67,15 +112,26 @@ require('backend/backend.php');
 				
 			
 			<ul>
+
+
+<?php 
+    $contadorCategorias= count($categoryList) ;
+    for ($i=0; $i <$contadorCategorias ; $i++) { 
+        $url= $categoryList[$i]['id']."-".$categoryList[$i]['url'];
+?>
 				<li>
-					<h2> <a href="" class="text-primary"> Cateoria de productos con nombre exagerdamente largo</a></h2>
+				<h2 > <a href="Categoria/<?php echo $url;?>" class="text-primary"> <?php echo mb_strtoupper($categoryList[$i]['titulo']);?></a></h2>
 				</li>
-				<li>
-				<h2> <a href="" class="text-primary"> Cateoria de productos con nombre exagerdamente largo</a></h2>
-				</li>
-				<li>
-				<h2 > <a href="" class="text-primary"> Cateoria de productos con nombre exagerdamente largo</a></h2>
-				</li>
+
+
+                                        
+                                    <?php } ?>
+
+
+
+
+
+
 </ul>
 
 
@@ -193,8 +249,8 @@ require('backend/backend.php');
 		<div class="body-panel">
 
 <?php 
-for ($i= 1; $i<=8; $i++)
-{
+    $contadorproducto= 8 ;
+    for ($i=0; $i <$contadorproducto ; $i++) { 
 ?>
 			<div class="col-1-4">
 				<img src="assets/images/imagen-4.png" alt="">
@@ -336,6 +392,6 @@ for ($i= 0; $i<=3; $i++)
 	</div>
 </footer>
 
-<script src="assets/js/functions.js"> </script>
+<script src="assets/js/functions.js?value=2.2"> </script>
 </body>
 </html>

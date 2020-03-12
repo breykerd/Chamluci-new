@@ -1,5 +1,22 @@
 
 
+if( screen.width < 440 ) {
+
+	console.log(screen.availWidth);
+
+	
+
+	var header =document.getElementById('header');
+	header.style.display='none';
+	
+	var elemento =document.getElementById('header-2');
+	elemento.style.display='block';
+	
+	
+	 
+	
+		
+	}else{
 
 (function(w,d,undefined){
  
@@ -60,12 +77,26 @@ function subMenu2(){
 	 subMenu.classList.remove('visible');
  }
 
+
+
+
+
+
+
+
+	console.log('telefno');
+	
+	var header =document.getElementById('header');
+	header.style.display='block';
+
+	var elemento =document.getElementById('header-2');
+	elemento.style.display='none';
+	
+
+}
 }
 
-
-
-
-
-
-
-
+function clases (){
+	el_body = document.getElementsByTagName('body')[0];
+	el_body.classList.toggle("visible_menu");
+}
