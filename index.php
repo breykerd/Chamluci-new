@@ -21,13 +21,13 @@ $featuredProducts=$Products->featuredProducts();
 	<title>Corporación Chamluci - Líderes en línea institucional</title>
 	<script src="assets/js/apiProcess.js" ></script>
 	<link rel="icon" href="assets/images/favicon.ico" type="image/ico">
-	<link rel="stylesheet/less" type="text/css" href="assets/css/style.less" />
-	<link rel="stylesheet/less" type="text/css" href="assets/css/responsive.less" />
+	<link rel="stylesheet/less" type="text/css" href="assets/css/style.less?value=<?php echo rand(5,12);?>" />
+	<link rel="stylesheet/less" type="text/css" href="assets/css/responsive.less?value=<?php echo rand(5,12);?>?value=" />
 	<link rel="stylesheet/less" type="text/css" href="assets/fonts/fontawesome/css/font-awesome.min.css" />
 	<script src="assets/js/less.min.js" ></script>
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 </head>
-<body>
+<body id="body" onresize="responsive();">
 <!-- start custom menu-->	
 <header class="site-header">
 
@@ -39,7 +39,7 @@ $featuredProducts=$Products->featuredProducts();
 		<div class="container">
 			<div class="row">
 				<div class="wt-topbar-center">
-					<ul>
+					<ul id="correoHeader">
 						<li>
 							 <a href="mailto:Ventas@corporacionchamluci.com">Ventas@corporacionchamluci.com</a>
 						</li>
@@ -49,10 +49,11 @@ $featuredProducts=$Products->featuredProducts();
 		</div>
 	</div>
 	<div class="header-2" id="header-2">
+	<i class="fa fa-shopping-cart fa-5"> </i>
 <a href="">
-<img src="assets/images/logo.png" style="margin-top:-4%; margin-left:3%;" alt="">
+<img src="assets/images/logo.png" width=50%%; alt="">
 </a>
-<a href="#" id="menu_on" onClick="clases();">
+<a href="#" id="menu_on" onClick="clases();return false;">
 			<span></span>
 			<span></span>
 			<span></span>
@@ -71,7 +72,30 @@ $featuredProducts=$Products->featuredProducts();
 	<ul>
 		<li><a href="#">Inicio</a></li>
 		<li><a href="#">La Empresa</a></li>
-		<li><a href="#">Productos</a></li>
+		
+
+		<li class="subMenu" >
+			<a href="#" onclick="mostrarOcultarSubMenu(); return false;">Productos</a>
+			<ul class="children" id="children">
+			<?php 
+    $contadorCategorias= count($categoryList) ;
+    for ($i=0; $i <$contadorCategorias ; $i++) { 
+        $url= $categoryList[$i]['id']."-".$categoryList[$i]['url'];
+?>
+				<li>
+				<a href="Categoria/<?php echo $url;?>" class="text-primary"> <?php echo mb_strtoupper($categoryList[$i]['titulo']);?></a>
+				</li>
+
+
+                                        
+                                    <?php } ?>	
+
+
+			</ul>
+
+		</li>
+		
+		
 		<li><a href="#">Blog</a></li>
 		<li><a href="#">Contacto</a></li>
 		<li></li>
@@ -392,6 +416,6 @@ for ($i= 0; $i<=3; $i++)
 	</div>
 </footer>
 
-<script src="assets/js/functions.js?value=2.2"> </script>
+<script src="assets/js/functions.js?value=<?php echo rand(5,12);?>"> </script>
 </body>
 </html>
