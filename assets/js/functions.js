@@ -13,11 +13,13 @@ if( screen.width < 650 ) {
 	correoHeader.classList.add('correo-Responsive');
 
 
-	var header =document.getElementById('header');
+	var header = document.getElementById('header');
 	header.style.display='none';
 	
-	var elemento =document.getElementById('header-2');
-	elemento.style.display='block';
+	var elemento = document.getElementById('header-2');
+	var elemento2 = document.getElementById('nav');
+	elemento.style.display= 'block'
+	elemento2.style.display='block';
 	//elemento.style.height='10%';
 	
 	
@@ -35,6 +37,8 @@ if( screen.width < 650 ) {
 //oculta menu responsivo
 	var elemento =document.getElementById('header-2');
 	elemento.style.display='none';
+	var elemento2 = document.getElementById('nav');
+	elemento2.style.display= 'none'
 
 	//ejecuta el menu stiky
 	menuProductos(window, document);

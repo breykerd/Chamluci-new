@@ -65,7 +65,7 @@ $featuredProducts=$Products->featuredProducts();
 
 
 
-<nav>
+<nav id="nav">
 <a href="">
 <img src="assets/images/logo.png" style="margin-top:-4%; margin-left:3%;" alt="">
 </a>	
@@ -75,7 +75,7 @@ $featuredProducts=$Products->featuredProducts();
 		
 
 		<li class="subMenu" >
-			<a href="#" onclick="mostrarOcultarSubMenu(); return false;">Productos</a>
+			<a href="" class="destacado" onclick="mostrarOcultarSubMenu(); return false;">Productos<i class="fa fa-arrow-down" ></i></a> 
 			<ul class="children" id="children">
 			<?php 
     $contadorCategorias= count($categoryList) ;
@@ -83,7 +83,7 @@ $featuredProducts=$Products->featuredProducts();
         $url= $categoryList[$i]['id']."-".$categoryList[$i]['url'];
 ?>
 				<li>
-				<a href="Categoria/<?php echo $url;?>" class="text-primary"> <?php echo mb_strtoupper($categoryList[$i]['titulo']);?></a>
+				<a href="Categoria/<?php echo $url;?>" > <?php echo mb_strtoupper($categoryList[$i]['titulo']);?></a>
 				</li>
 
 

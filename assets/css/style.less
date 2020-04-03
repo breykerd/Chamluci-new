@@ -403,7 +403,7 @@ animation-duration: 0.5s ;
 .productos:hover > .sub-menu
 {
 	display:block;
-	animation-duration: 0.5s ;
+	animation-duration: 0.2s ;
 	animation-name: ork;
 }
 
@@ -1035,9 +1035,15 @@ nav a{
 	display:block;
 	text-decoration: none;
 	padding: 10px;
-	color: @colorPrimaryOne;
+	color: @colorPrimaryTwo;
 	border-bottom: 1px solid @colorPrimaryOne;
 	transition: all ease 0.25s;
+}
+
+nav ul li ul{
+	background-color: @colorSecundarythree;
+	border-radius: 20px;
+	padding-left:3px ;
 }
  
 nav a:hover{
@@ -1078,9 +1084,34 @@ nav a:hover{
 }
 
 .subMenu{
+
+.destacado{
+	
+		 background-color: @colorPrimaryOne !important;
+		 color: @colorSecundarythree !important;	
+		 border-radius: 10px;
+		 padding: 15px;
+	
+ 
+}
 	& a:active:hover{
 		color: @colorPrimaryTwo;
+		i{
+			margin-left:45% !important ;
+
+		}
+		
 	}
+
+	
+& i {
+			margin-left: 45%;
+			font-size: 40px !important; 
+			&:active{
+				color: @colorSecundaryFive;
+				margin-left:45% !important ;
+			}	
+		}
 }
 
 .children{
@@ -1092,6 +1123,21 @@ display:none;
 .children-visibilite{
 	display: block;
 	animation: subMenu 0.2s;
+	& li{
+		background-color: @colorSecundarythree;
+	padding: 5px !important;
+	border-radius: 20px !important;
+
+	& a{
+		font-size: 25px;
+		color:@colorPrimaryOne;
+		border: 2px solid @colorPrimaryTwo;	
+		border-radius: 20px !important;
+
+	}
+	
+	}
+	
 
 }
 
