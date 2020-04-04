@@ -278,9 +278,12 @@ $featuredProducts=$Products->featuredProducts();
 ?>
 			<div class="col-1-4">
 				<img src="assets/images/imagen-4.png" alt="">
+				<h2>
+					Nombre del Producto Nombre del Producto
+
+				</h2>
 				<button class="buttom">
 					cotizar
-
 				</button>
 			</div>
 
