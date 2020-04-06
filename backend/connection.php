@@ -17,5 +17,5 @@ class Conexion extends mysqli {
 
 
 
-
+$urlImg='adminChamluci/img/';
 ?>

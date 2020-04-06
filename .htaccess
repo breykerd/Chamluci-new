@@ -1,0 +1,87 @@
+RewriteEngine on
+
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteRule ^Inicio$ index.php [NC,L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteRule ^La-Empresa$ laEmpresa.php [NC,L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteRule ^Categoria/(.*)$ productos.php?url=$1 [NC,L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteRule ^Producto/(.*)$ verProducto.php?url=$1 [NC,L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteRule ^Blog$ blog.php [NC,L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteRule ^Blog/(.*)$ verblog.php?url=$1 [NC,L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteRule ^Contacto$ contacto.php [NC,L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteRule ^Cotizacion$ pasarela.php [NC,L]
+
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/(?:\ Ballot169)?
+RewriteRule ^Buscar$ buscar.php [NC,L]
+
+ErrorDocument 404 /404.php
+
+
+
+Header unset ETag
+Header set Connection keep-alive
+
+FileETag None
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access 15 day" 
+ExpiresByType text/html "access 15 day" 
+ExpiresByType image/gif "access 15 day"
+ExpiresByType image/png "access 15 day"
+ExpiresByType image/jpg "access 15 day"
+ExpiresByType image/jpeg "access 15 day"
+ExpiresByType image/jxr "access 15 day"
+ExpiresByType image/webp "access 15 day"
+ExpiresByType image/x-icon "access 15 day"
+ExpiresByType application/pdf "access 15 day"
+ExpiresByType application/javascript "access 15 day" 
+ExpiresByType text/x-javascript "access 15 day"
+ExpiresByType application/x-shockwave-flash "access 15 day"
+ExpiresDefault "access 15 day"
+ExpiresByType text/x-javascript "access plus 15 day"  
+ExpiresByType application/x-javascript "access plus 15 day"
+ExpiresByType text/x-javascript "access 15 day"
+</IfModule>
+

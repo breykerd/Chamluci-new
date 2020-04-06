@@ -1,5 +1,7 @@
 <?php
 
+require 'connection.php';
+
 setlocale(LC_TIME,"es_ES");
 //incluir Conexion a base de datos
 $mysqli= new Conexion();

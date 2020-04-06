@@ -1,6 +1,5 @@
 <?php 
 //Archivos requeridos
-require('backend/connection.php');
 require('backend/backend.php');
 
 //clases requeridas
@@ -19,7 +18,7 @@ $featuredProducts=$Products->featuredProducts();
 	<meta charset="UTF-8">
 
 	<title>Corporación Chamluci - Líderes en línea institucional</title>
-	<script src="assets/js/apiProcess.js" ></script>
+	<!--<script src="assets/js/apiProcess.js" ></script>-->
 	<link rel="icon" href="assets/images/favicon.ico" type="image/ico">
 	<link rel="stylesheet/less" type="text/css" href="assets/css/style.less?value=<?php echo rand(5,12);?>" />
 	<link rel="stylesheet/less" type="text/css" href="assets/css/responsive.less?value=<?php echo rand(5,12);?>?value=" />
@@ -29,167 +28,16 @@ $featuredProducts=$Products->featuredProducts();
 </head>
 <body id="body" onresize="responsive();">
 <!-- start custom menu-->	
-<header class="site-header">
 
-
-
-
-
-	<div class="top-bar">
-		<div class="container">
-			<div class="row">
-				<div class="wt-topbar-center">
-					<ul id="correoHeader">
-						<li>
-							 <a href="mailto:Ventas@corporacionchamluci.com">Ventas@corporacionchamluci.com</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="header-2" id="header-2">
-	<i class="fa fa-shopping-cart fa-5"> </i>
-<a href="">
-<img src="assets/images/logo.png" width=50%%; alt="">
-</a>
-<a href="#" id="menu_on" onClick="clases();return false;">
-			<span></span>
-			<span></span>
-			<span></span>
-</a>
-
-	</div>
-		
-	
-
-
-
-<nav id="nav">
-<a href="">
-<img src="assets/images/logo.png" style="margin-top:-4%; margin-left:3%;" alt="">
-</a>	
-	<ul>
-		<li><a href="#">Inicio</a></li>
-		<li><a href="#">La Empresa</a></li>
-		
-
-		<li class="subMenu" >
-			<a href="" class="destacado" onclick="mostrarOcultarSubMenu(); return false;">Productos<i class="fa fa-arrow-down" ></i></a> 
-			<ul class="children" id="children">
-			<?php 
-    $contadorCategorias= count($categoryList) ;
-    for ($i=0; $i <$contadorCategorias ; $i++) { 
-        $url= $categoryList[$i]['id']."-".$categoryList[$i]['url'];
-?>
-				<li>
-				<a href="Categoria/<?php echo $url;?>" > <?php echo mb_strtoupper($categoryList[$i]['titulo']);?></a>
-				</li>
-
-
-                                        
-                                    <?php } ?>	
-
-
-			</ul>
-
-		</li>
-		
-		
-		<li><a href="#">Blog</a></li>
-		<li><a href="#">Contacto</a></li>
-		<li></li>
-	</ul>
-</nav>
-	<!-- -------------------- -->
-<div id="header" class="header">
-
-
-<div class="container">
-	<div class="row">
-
-	<div class="Superior">
-		<div class="logo-Header"> <img src="assets/images/logo.png" alt=""></div>
-		<div class="busqueda"><input type="text" placeholder="Busqueda"> <i class="fa fa-search"></i> </div>
-<div class="division">
-&nbsp;
-</div>
-		<div class="central"><i class="fa fa-phone"></i>
-		<a href="tel:012222312" >Central: (01)-222 2312 </a>
-</div>
-		<div class="redes-sociales">
-			<i class="fa fa-facebook-square iconSocial"></i>
-			<i class="fa fa-twitter iconSocial"></i>
-			<i class="fa fa-youtube iconSocial"></i>
-			<i class="fa fa-instagram iconSocial"></i>
-		</div>
-
-	</div>
-</div>
-<div class="row">
-	<div class="inferior menu"> 
-		<ul class="menu-inferior">
-			<li class="secciones"><a href="">Inicio</a></li>
-			<li class="secciones"><a href="">La Empresa</a></li>
-			<li class="productos"  ><a href="" >Productos</a> 
-			<div class="sub-menu" id="sub-menu" >
-				
-			
-			<ul>
 
 
 <?php 
-    $contadorCategorias= count($categoryList) ;
-    for ($i=0; $i <$contadorCategorias ; $i++) { 
-        $url= $categoryList[$i]['id']."-".$categoryList[$i]['url'];
+
+require 'includes/header.php';
+
 ?>
-				<li>
-				<h2 > <a href="Categoria/<?php echo $url;?>" class="text-primary"> <?php echo mb_strtoupper($categoryList[$i]['titulo']);?></a></h2>
-				</li>
 
 
-                                        
-                                    <?php } ?>
-
-
-
-
-
-
-</ul>
-
-
-</div>
-		</li>
-			<li class="secciones"><a href="">Blogs</a></li>
-			<li class="secciones"><a href="">Contactos</a></li>
-		</ul>	
-		<div class="carrito">
-			<div class="cantidad">
-				<a href="Cotizacion" class="fa fa-shopping-cart"></a>
-				<div class="circulo" style=>0</div>
-				
-			</div>
-		</div>
-
-	</div>
-	
-</div>
-
-
-
-</div>
-<!-- menu flotante -->
-
-
-
-
-
-
-			
-		
-<!-- fin menu flotante -->
-</header>
 <!-- end custom menu --> 
 <!-- start slider --> 
 <div class="slider">
@@ -277,9 +125,16 @@ $featuredProducts=$Products->featuredProducts();
     for ($i=0; $i <$contadorproducto ; $i++) { 
 ?>
 			<div class="col-1-4">
-				<img src="assets/images/imagen-4.png" alt="">
-				<h2>
-					Nombre del Producto Nombre del Producto
+			<a href="<?php echo 'Producto/'.$featuredProducts[$i]['id'].'-'.$featuredProducts[$i]['url']; ?>" title="Imagen"> 
+                        <img class="lazy" src="assets/images/loading.webp" 
+                        data-src="<?php echo $urlImg.$featuredProducts[$i]['img1']; ?>" 
+                        data-srcset="<?php echo $urlImg.$featuredProducts[$i]['img1']; ?>"  
+                        title="<?php echo $featuredProducts[$i]['titulo']; ?>" 
+                        alt="<?php echo $featuredProducts[$i]['titulo']; ?>">
+                    </a>
+				<h2 class="text-primary-two">
+				<a href="<?php echo 'Producto/'.$featuredProducts[$i]['id'].'-'.$featuredProducts[$i]['url']; ?>" title="<?php echo $featuredProducts[$i]['titulo']; ?>" ><?php echo $featuredProducts[$i]['titulo']; ?></a>
+
 
 				</h2>
 				<button class="buttom">
@@ -330,94 +185,11 @@ $featuredProducts=$Products->featuredProducts();
 
 </div>
 
+<?php
 
-<footer>
-	<div class="container">
-		<div class="row body-panel">
-			<div class="col-footer-1">
-				<h4>
-					Redes Sociales
-				</h4>
-				<div class="separador1">
-					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>
-					
-				</div>
-					<div class="redes-sociales">
-						<i class="fa fa-facebook-square iconSocial"></i>
-						<i class="fa fa-twitter iconSocial"></i>
-						<i class="fa fa-youtube iconSocial"></i>
-						<i class="fa fa-instagram iconSocial"></i>
-					</div>
-					<div class="logo-footer"> <img src="assets/images/logo.png" alt=""></div>
+require 'includes/footer.php'
 
-			</div>
-			<div class="col-footer-2">
-				<h4>
-					Productos Destacados
-				</h4>
-				<div class="separador1">
-					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>
-				</div>
-
-				<?php 
-for ($i= 1; $i<=2; $i++)
-{
-?>				
-				 
-				<div class="container">
-
-
-				<div class="sub-col-1">
-					<img src="assets/images/imagen-4.png" alt="">
-				</div>
-				<div class="sub-col-2">
-					<h4>Nombre del producto extremadamente largo <?php echo $i; ?></h4>
-					<a href="#" class="text-primary"> Ver Más</a>
-				</div>
-				</div>
-				<?php }; ?>
-
-
-			</div>
-
-
-			<div class="col-footer-3">
-				<h4>
-					Información
-				</h4>
-				<div class="separador1">
-					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>	
-				</div>
-
-				<?php 
-$contenido= array("Av. Santa Rosa # 424 - Santa Anita - Lima - Perú","01 - 478 0646","ventas@corporacionchamluci.com","947153316 / 934717709");	
-$icons= array("fa-map-marker","fa-phone","fa-envelope-o","fa-whatsapp");
-
-for ($i= 0; $i<=3; $i++)
-{
-?>	
-				<div class="container">
-					<div class="sub-col-1">
-							<i class="fa <?php echo $icons[$i]; ?>"> </i>
-					</div>
-					<div class=sub-col-2>
-					<a href=""><?php echo $contenido[$i]; ?></a>
-					</div>
-
-				</div>
-				<?php }; ?>
-
-
-			</div>
-
-
-		</div>
-
-	</div>
-	<div class="copyright text-center">
-		<h4>© 2019 Corporación Chamluci S.A.C. Todos Los Derechos Reservados. Realizado Por Tecnoblack.</h4>
-	</div>
-</footer>
+?>
 
 <script src="assets/js/functions.js?value=<?php echo rand(5,12);?>"> </script>
 </body>

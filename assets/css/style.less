@@ -718,9 +718,14 @@ animation-duration: 0.5s ;
 	h2{
 		z-index: 1;
 		position: relative;
-		font-size: 20px;
-		padding: 8%;
-		text-align: justify;
+		font-size: 18px;
+		padding-left: 5%;
+		padding-right: 5%;
+		text-align: center;
+		a{
+		color: @colorSecundaryOne !important;	
+		}
+		
 	}
 
 }
@@ -738,17 +743,37 @@ animation-duration: 0.5s ;
 	}
 }
 
+.col-1-3{
+	
+	position: relative;
+	display: flex;
+	float: left;
+	width: 77%;
+	margin: 1%;
+	//.shadow;
+	& img{
+		width: 90%;
+		margin-left: 5%;
+	}
+}
+
+
+
+.Productos{
+	.col-1-4{
+		width: 30%;
+	}
+}
+
 
 .col-footer-1 {
 	text-align: center;
 	width: 30%;
 	float: left;
-	height: 350px;
+	//height: 350px;
 	align-content: center;
 	 & .separator-right{
 		top: 0%;
-	}& i{
-		height: 20px;
 	}& h4{
 		font-size: 20px;
 		padding-left: 10%;
@@ -774,7 +799,7 @@ animation-duration: 0.5s ;
 .col-footer-2 {
 	width: 30%;
 	float: left;
-	height: 350px;
+	//height: 350px;
 	& .separator-right{
 		top: 0%;
 	}& i{
@@ -823,7 +848,7 @@ width: 90%;
 .col-footer-3 {
 	width: 40%;
 	float: left;
-	height: 350px;
+	//height: 350px;
 	& .separator-right{
 		top: 0%;
 	}& i{
@@ -904,16 +929,21 @@ footer{
 	background-color: @colorSecundaryOne;
 	color: @colorSecundarythree;
 	width: 100%;
-	height: 450px;
 
 	
 }
 
 .copyright{
 	background-color: @colorSecundaryFour;
-	height: 65px;
+	background-size: cover;
+	//height: 65px;
 	position: relative;
-	padding-top: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	h4{
+		margin-bottom: 0;
+       // padding-bottom: 5%;
+	}
 }
 /* final footer */
 
@@ -979,6 +1009,13 @@ footer{
 	color: @colorPrimaryOne !important;
 }
 
+.text-primary-two{
+	color: @colorPrimaryTwo;
+	height: 110px;
+	a{
+		color: @colorPrimaryTwo !important;
+	}
+}
 .header-2{
 	display: none;
 	padding-top: 4%;
