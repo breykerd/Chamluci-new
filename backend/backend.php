@@ -9,6 +9,7 @@ $mysqli= new Conexion();
 
 //class category
 class Category extends Conexion{
+    //lista de categorias
     public function categoryList()
     {
         $mysqli= new Conexion();
@@ -18,6 +19,16 @@ class Category extends Conexion{
             $listacategorias[]=$resultadocategoria;
         };
         return $listacategorias;
+    }
+    
+    //datos de categoria via id
+    public function datosCategoria($idCategoria)
+    {
+        $mysqli= new Conexion();
+        $resultadoCategoriaUnica=$mysqli->query("SELECT * FROM categorias WHERE id= '$idCategoria' ");
+        return $resultadoCategoriaU=$resultadoCategoriaUnica->fetch_assoc();
+        $resultadoCategoriaU->free();
+        mysqli::close;
     }
 }
 
@@ -49,6 +60,8 @@ class Products extends Conexion
         $listaProductos->free();
         mysqli::close;
     }
+
+    //datos de producto en especifico
      public function datosProducto($idProducto)
     {
         $mysqli= new Conexion();
@@ -56,7 +69,9 @@ class Products extends Conexion
         return $resultadoProductoU=$resultadoProductoUnico->fetch_assoc();
         $resultadoProductoU->free();
     }
-         public function productosDestacadosCategoria($idCategoria)
+
+    //datos de productos segun id de categoria
+         public function productosCategoria($idCategoria)
     {
         $mysqli= new Conexion();
         $resultadoProductosCategoria=$mysqli->query("SELECT * FROM productos WHERE id_cate='$idCategoria'");
@@ -68,7 +83,7 @@ class Products extends Conexion
         $listaProductosCategoria->free();
         mysqli::close;
     }
-    
+    //certificados
      public function certificados($idCertificado){
         $mysqli=new Conexion();
         $resultadoConsulta=$mysqli->query("SELECT * FROM certificados WHERE idCertificado='$idCertificado'");
@@ -76,6 +91,7 @@ class Products extends Conexion
         $resultadoCertificado->free();
         mysqli::close; 
     }
+    //garantias
     public function garantias($idGarantias){
         $mysqli=new Conexion();
         $resultadoConsultas=$mysqli->query("SELECT * FROM garantias WHERE idGarantias='$idGarantias'");

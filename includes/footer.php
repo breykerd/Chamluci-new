@@ -82,3 +82,10 @@ for ($i= 0; $i<=3; $i++)
 		<h4>© 2019 Corporación Chamluci S.A.C. Todos Los Derechos Reservados. Realizado Por Tecnoblack.</h4>
 	</div>
 </footer>
+
+<a class="ir-arriba"  javascript:void(0) title="Volver arriba">
+  <span class="fa-stack">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+  </span>
+</a>

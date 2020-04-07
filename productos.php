@@ -21,8 +21,10 @@ $Products= new Products();
 //funciones Utilizadas
 
 $categoryList = $Category->categoryList();
+$datosCategoria = $Category->datosCategoria($idCategoria);
 $featuredProducts = $Products->featuredProducts();
-$ProductCategory = $Products->productosDestacadosCategoria($idCategoria);
+$ProductCategory = $Products->productosCategoria($idCategoria);
+
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +53,12 @@ require 'includes/header.php';
 
 ?>
 
-
+<div class="slider-little">
+<img id="cabezera" class="img-header" src="<?php echo $urlImg.$datosCategoria['img_header']; ?>"  alt="">
+    <h1 class="texto-header text-white size-h1">
+        <?php echo ucwords(mb_strtolower($datosCategoria['titulo'])); ?>
+    </h1>
+</div>
 
 
 <div class="container">
@@ -60,10 +67,55 @@ require 'includes/header.php';
 
 
 <div class="row">
-    <div class="col-1-4">
-esto es categorias
+    <div class="Categorias col-1-4">
+		<div class="container">
+			<div class="row">
+				<div class="body-panel">
+					<div class="col-1-4">
+						<div class="header-categoria">
+								<h3>
+									Categoriás
+								</h3>
+						</div>
+						<div class="body-category">
+							<ul>
+							<?php 
+            $contadorCategorias= count($categoryList) ;
+            for ($i=0; $i <$contadorCategorias ; $i++) { 
+                 $url= $categoryList[$i]['id']."-".$categoryList[$i]['url'];
+            ?>
+				                        <li>
+				                            <h4 > 
+											<i class="fa fa-minus" aria-hidden="true"></i>
+<a href="Categoria/<?php echo $url;?>" title="<?php echo mb_strtoupper($categoryList[$i]['titulo']);?>" > 
+                                                    <?php echo mb_strtoupper($categoryList[$i]['titulo']);?>
+                                                </a>
+                                            </h4>
+				                        </li>
+        <?php } ?>
+
+
+							</ul>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
     </div>
-    <div class="col-1-3">
+	
+	
+	
+	
+	
+	<div class="col-1-3">
         
 
 
@@ -71,22 +123,46 @@ esto es categorias
 <div class="container Productos">
 	<div class="row">
 		
-		<div class="body-panel">
 
+
+
+
+		<div class="body-panel">
+<div class="header-panel">
+			<div class="cabecera-1">
+				<i class="fa fa-sort-alpha-asc trasparence" aria-hidden="true"></i>
+				<i class="fa fa-random" aria-hidden="true"></i>
+			</div>
+			<div class="cabezera-2">
+				<p>Modo de visualización</p>
+				<i class="fa fa-th-list" aria-hidden="true"></i>
+				<i class="fa fa-th trasparence" aria-hidden="true"></i>
+			</div>
+
+		</div>
+				
 <?php 
-    $contadorproducto= 8 ;
-    for ($i=0; $i <$contadorproducto ; $i++) { 
+
+$cantidadRespuesta = count($ProductCategory);
+if($cantidadRespuesta < 8 ){
+	$contadorproducto = $cantidadRespuesta;
+}else{
+	$contadorproducto= 8;
+}
+
+    
+	for ($i=0; $i < $contadorproducto ; $i++) { 
 ?>
 			<div class="col-1-4">
-			<a href="<?php echo 'Producto/'.$featuredProducts[$i]['id'].'-'.$featuredProducts[$i]['url']; ?>" title="Imagen"> 
+			<a href="<?php echo 'Producto/'.$ProductCategory[$i]['id'].'-'.$ProductCategory[$i]['url']; ?>" title="Imagen"> 
                         <img class="lazy" src="assets/images/loading.webp" 
-                        data-src="<?php echo $urlImg.$featuredProducts[$i]['img1']; ?>" 
-                        data-srcset="<?php echo $urlImg.$featuredProducts[$i]['img1']; ?>"  
-                        title="<?php echo $featuredProducts[$i]['titulo']; ?>" 
-                        alt="<?php echo $featuredProducts[$i]['titulo']; ?>">
+                        data-src="<?php echo $urlImg.$ProductCategory[$i]['img1']; ?>" 
+                        data-srcset="<?php echo $urlImg.$ProductCategory[$i]['img1']; ?>"  
+                        title="<?php echo $ProductCategory[$i]['titulo']; ?>" 
+                        alt="<?php echo $ProductCategory[$i]['titulo']; ?>">
                     </a>
 				<h2 class="text-primary-two">
-				<a href="<?php echo 'Producto/'.$featuredProducts[$i]['id'].'-'.$featuredProducts[$i]['url']; ?>" title="<?php echo $featuredProducts[$i]['titulo']; ?>" ><?php echo $featuredProducts[$i]['titulo']; ?></a>
+				<a href="<?php echo 'Producto/'.$ProductCategory[$i]['id'].'-'.$ProductCategory[$i]['url']; ?>" title="<?php echo $ProductCategory[$i]['titulo']; ?>" ><?php echo $ProductCategory[$i]['titulo']; ?></a>
 
 
 				</h2>
