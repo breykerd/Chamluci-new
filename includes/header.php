@@ -33,8 +33,8 @@
             <img src="assets/images/logo.png" style="margin-top:-4%; margin-left:3%;" alt="">
         </a>	
 	    <ul>
-		    <li><a href="#">Inicio</a></li>
-		    <li><a href="#">La Empresa</a></li>
+		    <li><a href="Inicio">Inicio</a></li>
+		    <li><a href="Nosotros">La Empresa</a></li>
 		    <li class="subMenu" >
 			    <a href="" class="destacado" onclick="mostrarOcultarSubMenu(); return false;">Productos<i class="fa fa-arrow-down" ></i></a> 
 			    <ul class="children" id="children">
@@ -54,8 +54,8 @@
 		    </li>
 		
 		
-		    <li><a href="#">Blog</a></li>
-		    <li><a href="#">Contacto</a></li>
+		    <li><a href="Blog">Blog</a></li>
+		    <li><a href="Contacto">Contacto</a></li>
 	    </ul>
     </nav>
     <!-- --------End Menu Responsivo------------ -->
@@ -94,8 +94,8 @@
             <div class="row">
 	            <div class="inferior menu"> 
 		            <ul class="menu-inferior">
-			            <li class="secciones"><a href="" title="Inicio">Inicio</a></li>
-			            <li class="secciones"><a href="" title="La-Empresa">La Empresa</a></li>
+			            <li class="secciones"><a href="Inicio" title="Inicio">Inicio</a></li>
+			            <li class="secciones"><a href="Nosotros" title="Nosotros">La Empresa</a></li>
 			            <li class="productos"><a href="" title="Productos">Productos</a> 
 			                <div class="sub-menu" id="sub-menu" >
 			                    <ul>
@@ -117,8 +117,8 @@
                                 </ul>
                             </div>
 		                </li>
-			            <li class="secciones"><a href="" title="Blog">Blog</a></li>
-			            <li class="secciones"><a href="" title="Contactos">Contactos</a></li>
+			            <li class="secciones"><a href="Blog" title="Blog">Blog</a></li>
+			            <li class="secciones"><a href="Contacto" title="Contactos">Contactos</a></li>
 		            </ul>	
 		            <div class="carrito">
 			            <div class="cantidad">

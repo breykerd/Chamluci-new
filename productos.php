@@ -8,10 +8,10 @@ require('backend/backend.php');
 $urlRelativo=$_SERVER['REQUEST_URI'];
 
 //realizo explode a la url para optener el string donde se encuentra agregada el numero de categoria
-$url=explode('/', $urlRelativo);
+$urls=explode('/', $urlRelativo);
 
 //luego a ese string le realizo otro explode pero esta ves con un delimitador diferente para optener  la id de la categoria
- $idRelativo=explode('-', $url[3]);
+ $idRelativo=explode('-', $urls[3]);
 // luego ese elemento donde se encuentra el id de la categoria lo guardo en una variable para poder manejarlo mejor
 $idCategoria= $idRelativo[0];
 //clases requeridas
@@ -51,14 +51,9 @@ $ProductCategory = $Products->productosCategoria($idCategoria);
 
 require 'includes/header.php';
 
+require 'includes/slider-little.php'
 ?>
 
-<div class="slider-little">
-<img id="cabezera" class="img-header" src="<?php echo $urlImg.$datosCategoria['img_header']; ?>"  alt="">
-    <h1 class="texto-header text-white size-h1">
-        <?php echo ucwords(mb_strtolower($datosCategoria['titulo'])); ?>
-    </h1>
-</div>
 
 
 <div class="container">
@@ -147,7 +142,7 @@ $cantidadRespuesta = count($ProductCategory);
 if($cantidadRespuesta < 8 ){
 	$contadorproducto = $cantidadRespuesta;
 }else{
-	$contadorproducto= 8;
+	$contadorproducto= $cantidadRespuesta;
 }
 
     

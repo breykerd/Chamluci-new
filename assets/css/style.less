@@ -72,9 +72,26 @@ a{
 	box-shadow: 3px 0px 10px 0px rgba(40,69,97,1);
 }
 
+.border{
+	border-radius: 20px;
+}
+
+.margin-Top-Button{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.margin-p{
+	 margin: 40px !important;
+}
+
 .hoverButtom{
 	background-color: @colorPrimaryTwo;
 	transition: all 0.2s ease-in-out;
+}
+
+.margin-top-none{
+	margin-top: 0 !important;
 }
 
 /* fin configuracion inicial*/
@@ -477,7 +494,11 @@ animation-duration: 0.5s ;
 /* fin estilo del menu*/
 
 
-
+.horizontal {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
 
 
 
@@ -506,6 +527,18 @@ position: relative;
 		left: 20%;
 		text-shadow: -4px 5px 4px #000;
 		font-size: 45px;
+		color: @colorSecundarythree;
+		width: 60%;
+
+	}
+	h2{
+		animation-duration: 3s;
+    animation-name: textoHeader;
+		position: absolute;
+		top: 15%;
+		left: 20%;
+		text-shadow: -4px 5px 4px #000;
+		font-size: 40px;
 		color: @colorSecundarythree;
 		width: 60%;
 
@@ -668,11 +701,15 @@ position: relative;
 	text-align: center;
 	padding-top: 3%;
 	}
+	& 
 	& p{
 		margin:5% 10% 10% 20% ;
 
 		text-align: left;
 		font-size: 16px;
+	}
+	h3{
+		font-size: 30px;
 	}
 }
 /* fin categorias destacadas */
@@ -1342,7 +1379,7 @@ display:none;
 
 
 .ir-arriba{
-	//display:none;
+	display:none;
 	font-size:25px !important;
 	cursor:pointer;
 	position:fixed;
