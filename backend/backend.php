@@ -7,6 +7,41 @@ setlocale(LC_TIME,"es_ES");
 $mysqli= new Conexion();
 
 
+
+
+//clase que busca la informacion de la empresa y de contacto
+
+
+class laEmpresa extends Conexion
+{
+	    public function Empresa()
+    {
+        $mysqli= new Conexion();
+        $resultadoLaEmpresa=$mysqli->query("SELECT * FROM laempresa");
+        return $resultadoEmpresa=$resultadoLaEmpresa->fetch_assoc();
+        $resultadoEmpresa->free();
+        mysqli::close;
+    }
+    	    public function contacto()
+    {
+        $mysqli= new Conexion();
+        $resultadoContacto=$mysqli->query("SELECT * FROM contaco ");
+        return $resultadoDeContacto=$resultadoContacto->fetch_assoc();
+        $resultadoDeContacto->free();
+        mysqli::close;
+    }
+    
+    public function seoGeneral()
+    {
+        $mysqli= new Conexion();
+        $resultadoseo=$mysqli->query("SELECT * FROM seogeneral ");
+        return $resultadoDeseo=$resultadoseo->fetch_assoc();
+        $resultadoDeseo->free();
+        mysqli::close;
+    }
+}
+
+
 //class category
 class Category extends Conexion{
     //lista de categorias

@@ -70,7 +70,21 @@ if($urls[2]=='Nosotros'){
         
         
         <?php
-        }
+        }else if($urls[2]=='Cotizacion'){
+            ?>
+            
+            
+            <div class="slider-little">
+            <img id="cabezera" class="img-header" src="assets/images/solicitud.jpg"  alt="">
+                <h1 class="texto-header text-white size-h1">
+                Area De Cotización
+                </h1>
+            </div>    
+            
+            
+            
+            <?php
+            }
 ?>
 
 

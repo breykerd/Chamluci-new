@@ -6,7 +6,7 @@
 class Conexion extends mysqli {
 
     public function __construct(){
-        parent::__construct('localhost','root','','newdatabase');
+        parent::__construct('localhost','root','','databasenew');
         $this->query("SET NAMES 'utf8';");
         $this->connect_errno ? die('Error con la conexion') : $mysqli = 'Conectado';
         unset ($mysqli);

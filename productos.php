@@ -161,8 +161,12 @@ if($cantidadRespuesta < 8 ){
 
 
 				</h2>
-				<button class="buttom">
+				<button class="buttom"  id="cotizar<?php echo $ProductCategory[$i]['id'];?>" onClick="compararArrays(<?php echo $ProductCategory[$i]['id']; ?>)">
+				<input type="hidden" name="valores"  value="<?php echo $ProductCategory[$i]['id'];?>">
 					cotizar
+				</button>
+				<button class="buttom cotizado" id="agregado<?php echo $ProductCategory[$i]['id'];?>">
+					Agregado
 				</button>
 			</div>
 

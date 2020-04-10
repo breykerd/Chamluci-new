@@ -2,7 +2,7 @@
 //var body = document.getElementById('body');
 //body.addEventListener('resize',responsive);
 responsive();
-
+botones();
 
 // mostrar un menu o otro segun la resolucion
 function responsive(){	
@@ -193,4 +193,102 @@ document.addEventListener("DOMContentLoaded", function() {
   
   
   
-  
+  //carrito de cotizacion
+
+//compara los arrays para ver si ya el producto esta en el carrito
+// de no estarlo lo agrega
+  function compararArrays(idProducto){
+	var producto=idProducto;
+	if (sessionStorage.productos!=undefined) {
+	var productos= sessionStorage.productos.split(",");
+	}else{
+		agregarCarrito(idProducto);
+	}
+	var encuentra = false;
+	
+		for(var j =0; j < productos.length;j++){
+			 if(producto == productos[j]){
+				 encuentra = true;
+				 break;
+			 }
+		}
+		if(!encuentra){
+		   agregarCarrito(idProducto);
+		   
+		}
+	};
+
+  //funcion que agrega el producto al carrito si este no a sido incluido anteriormente
+function agregarCarrito(idProducto){
+    if (sessionStorage.productos!=undefined) {
+var producto= sessionStorage.productos.split(",");
+
+producto.push(idProducto);
+var producto= producto.join();
+sessionStorage.productos = producto;
+
+    }else{
+
+var idProductos = [idProducto];
+var productos= idProductos.join();
+sessionStorage.productos = productos;
+    }
+    botones();
+};
+
+
+//funcion que coloca los botones en cotizar o agregado segun sea su estado 
+//se ejecuta al cargar la pagina y al dar click en agregar
+function botones(){
+
+    if (sessionStorage.productos!=undefined) {
+var producto= sessionStorage.productos.split(",");
+var valores = document.getElementsByName('valores');
+
+for(var i =0; i < valores.length; i++){
+    
+
+
+    for(var j =0; j < producto.length;j++){
+
+
+	var cotizar = document.getElementById('cotizar'+valores[i]['value']);
+	var agregado = document.getElementById('agregado'+valores[i]['value']);	
+
+
+         if(valores[i]['value'] == producto[j]){
+			 console.log(producto[j]);
+            	cotizar.style.display="none";
+				agregado.style.display="block"
+				agregado.style.marginLeft="15%";          
+         }else{
+			
+				cotizar.style.display="block";
+				cotizar.style.marginLeft="25%";
+                agregado.style.display="none"           
+
+    }
+    }
+
+    }
+iconoCarro();
+}else{
+	var carrito = document.getElementById('nun');
+	carrito.innerText ="0";
+}
+};
+
+
+
+function iconoCarro(){
+	if (sessionStorage.productos!=undefined) {
+		var nProductos= sessionStorage.productos.split(",");
+		var cantidadProductos =nProductos.length;
+		var carrito = document.getElementById('nun');
+		carrito.innerText =cantidadProductos;
+	
+	}else{
+		var carrito = document.getElementById('nun');
+		carrito.innerText ="0";
+	}
+	};

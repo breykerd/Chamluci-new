@@ -14,10 +14,13 @@ $urls=explode('/', $urlRelativo);
 
 $Category = new Category();
 $Products = new Products();
+$laEmpresa =new laEmpresa();
 
 //funciones Utilizadas
 
 $categoryList = $Category->categoryList();
+$contacto= $laEmpresa->contacto();
+
 
 ?>
 
@@ -25,6 +28,7 @@ $categoryList = $Category->categoryList();
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+
 
 	<title>Corporación Chamluci - Líderes en línea institucional</title>
 	<!--<script src="assets/js/apiProcess.js" ></script>-->
@@ -47,48 +51,55 @@ require 'includes/header.php';
 require 'includes/slider-little.php'
 ?>
 
-
 <div class="row shadow margin-Top-Button">
 <div class="container ">
 	<div class="row ">
 		<div class="body-panel">
 			
-			<div class="col-1-2 form width-70">
+			<div class="col-1-3-modific form width-70">
 				<div class="header-panel">
 					<h1>
-						Articulos
+					Área de cotización 
 					</h1>
 					<div class="separador1 margin-left-none margin-right-none width-100">
 						<i class="fa fa-object-ungroup text-primary"></i> 
 						<span class="separator-right bg-primary"></span>
 					</div>
+					productos a cotizar
+					<div class="separador1 margin-left-none margin-right-none width-100">
+			<span class="separator-left margin-right-none "></span><i class="fa fa-object-ungroup"></i>
+		</div>
+
 				</div>
 
-				
+				<div class="col-1-2 margit-top-10">
 
-			</div>
-			
-			<div class="col-1-2 width-30">
-			<h4>
-					Redes Sociales
-				</h4>
-				<div class="separador1">
-					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>
+					<div class="combo-Input width-90">
+					<i class="fa fa-building"></i><input type="text" name="" placeholder="Ruc" id="">
+					</div>
+
+					<div class="combo-Input width-90">
+					<i class="fa fa-envelope"></i><input type="text" name="" placeholder="Nombre" id="">
+					</div>
+				
+				</div>
+				<div class="col-1-2">
+					<div class="combo-Input width-90">
+					<i class="fa fa-user"></i><input type="text" name="" placeholder="Asunto" id="">
+					</div>
+
+					<div class="combo-Input width-90">
+					<i class="fa fa-phone"></i><input type="text" name="" placeholder="Telefóno" id="">
+					</div>
+
 				</div>
 				<div>
-
-				
-					<ul>
-						<li>
-							<a href="">Facebook</a>
-						</li>
-					</ul>
-					
+				<div class="combo-Input width-95">
+					<i class="fa fa-phone"></i><textarea name="" id="" cols="" rows="4" placeholder="Mensaje"></textarea>
+					</div>
 				</div>
-					<div class="contenido text-center">
-					<iframe title="facebook" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCorporacion-Chamluci-SAC-657265237665077%2F&tabs=timeline&width=350&height=550&small_header=false&adapt_container_width=false&hide_cover=false&show_facepile=true&appId" width="220" height="500"  scrolling="no" frameborder="0" allowTransparency="true" async></iframe>
-                                   
-					</div>			</div>
+
+			</div>
 
 		</div>
 
@@ -102,7 +113,15 @@ require 'includes/slider-little.php'
 </div>
 </div>
 
+
+
+
+
+
+
+
 <?php
+
 
 require 'includes/footer.php'
 

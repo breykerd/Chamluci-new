@@ -123,7 +123,7 @@
 		            <div class="carrito">
 			            <div class="cantidad">
 				            <a href="Cotizacion" title="Area de Cotizacion" class="fa fa-shopping-cart"></a>
-				            <div class="circulo" style=>0</div>
+				            <div class="circulo" id="nun">0</div>
 				
 			        </div>
 		        </div>
