@@ -289,3 +289,94 @@ function iconoCarro(){
 		carrito.innerText ="0";
 	}
 	};
+mostrarProductosCarrito();
+
+	function mostrarProductosCarrito(){
+
+		var estructura = '<div class="col border shadow  cotizacion">'+
+			'<img src="adminchamluci/img/imagen"  alt="">'+
+				'<p>titulo</p>'+
+				'<div class="cantidads">'+
+					'<p>cantidad</p>'+
+					'<input type="number" value="1" id="cantidades" onkeyup="cambiarValor(id);">'+
+					'<input type="hidden" id="idhidden" value="1">'+
+				'</div>'+
+				'<button class="buttom" onclick="eliminarProducto(id);">'+
+					'Eliminar'+
+				'</button>'+
+		'</div>'+
+		'</br>';
+		
+		
+		var nProductos= sessionStorage.productos.split(",");
+		var cantidadProductos =nProductos.length;
+
+		var contenedor = document.getElementById('productos');
+		
+
+		var request = new XMLHttpRequest();
+
+	
+
+		var id=nProductos[0];	
+		var url = 'backend/backend.php?funcion=ProductosParaCarrito&id='+id;
+
+		request.open('GET', url);
+		request.send();
+
+		request.onreadystatechange =productoCotizado(request.responseText, request.readyState)
+
+			
+		
+		function productoCotizado(data, estado){
+			if(estado == 4){
+				datosC= JSON.parse(data); 
+				
+				estructura2 = estructura.replace('imagen', datosC['img1']);
+				estructura2 = estructura2.replace('titulo', datosC['titulo']);
+				estructura2 = estructura2.replace('cantidades', 'cantidad-'+datosC['id']);
+				estructura2 = estructura2.replace('idhidden', 'idhidden-'+datosC['id']);
+				estructura2 = estructura2.replace('cambiarValor(id);', 'cambiarValor('+datosC['id']+');');
+				estructura2 = estructura2.replace('eliminarProducto(id);', 'eliminarProducto('+datosC['id']+');');
+				console.log(estructura2)
+				
+				contenedor.insertAdjacentHTML('beforeend',estructura2);
+				
+
+
+			}else{
+				console.log('error')
+			}
+		};
+
+
+		};
+		
+
+
+
+
+
+
+
+
+	//Area Del Blog
+	setTimeout('paginarBlog(1);',700); 
+
+	function paginarBlog(page){
+		var contenedor = document.getElementById('articulos');
+		var url = 'includes/paginacionBlog.php?page='+page;
+
+		var request = new XMLHttpRequest();
+
+		request.onreadystatechange = function(){
+			if(request.readyState === 4){
+				contenedor.innerHTML = request.responseText;
+			}else{
+			}
+		}
+
+		request.open('GET' , url);
+		request.send();
+
+	}

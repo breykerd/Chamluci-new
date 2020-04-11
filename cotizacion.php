@@ -65,9 +65,15 @@ require 'includes/slider-little.php'
 						<i class="fa fa-object-ungroup text-primary"></i> 
 						<span class="separator-right bg-primary"></span>
 					</div>
-					<br>
-aca van los productos que van a ser cotizados	
-<br>				
+						<div class="col background-none cotizacion">
+							<h5>Si quieres adquirir cantidades grandes en los productos háznoslo sabes podrías obtener un descuento sorpresa</h5>
+						</div>
+<div id="productos">
+
+
+						
+</div>
+
 <div class="separador1 margin-left-none margin-right-none width-100">
 						<span class="separator-left margin-right-none "></span><i class="fa fa-object-ungroup"></i>
 					</div>
@@ -77,27 +83,27 @@ aca van los productos que van a ser cotizados
 				<div class="col-1-2 margit-top-10">
 
 					<div class="combo-Input width-90">
-					<i class="fa fa-building"></i><input type="text" name="" placeholder="Ruc" id="">
+					<i class="fa fa-building"></i><input type="text" name="" placeholder="Ruc" id="ruc">
 					</div>
 
 					<div class="combo-Input width-90">
-					<i class="fa fa-envelope"></i><input type="text" name="" placeholder="Nombre" id="">
+					<i class="fa fa-envelope"></i><input type="text" name="" placeholder="Nombre" id="nombre">
 					</div>
 				
 				</div>
 				<div class="col-1-2">
 					<div class="combo-Input width-90">
-					<i class="fa fa-user"></i><input type="text" name="" placeholder="Asunto" id="">
+					<i class="fa fa-user"></i><input type="text" name="" placeholder="Asunto" id="asunto">
 					</div>
 
 					<div class="combo-Input width-90">
-					<i class="fa fa-phone"></i><input type="text" name="" placeholder="Telefóno" id="">
+					<i class="fa fa-phone"></i><input type="text" name="" placeholder="Telefóno" id="telefono">
 					</div>
 
 				</div>
 				<div>
 				<div class="combo-Input width-95">
-					<i class="fa fa-phone"></i><textarea name="" id="" cols="" rows="4" placeholder="Mensaje"></textarea>
+					<i class="fa fa-phone"></i><textarea name="" id="mensaje" cols="" rows="4" placeholder="Mensaje"></textarea>
 					</div>
 				</div>
 
