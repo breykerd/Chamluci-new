@@ -62,17 +62,20 @@
 
 		<div class="body-panel">
 			<div class="row text-center">
-				<a class="buttom">
-				Cotizar
-</a>
+			<button class="buttom margin-top-none"  id="cotizar<?php echo $DatosProducto['id'];?>" onClick="compararArrays(<?php echo $DatosProducto['id']; ?>)">
+				<input type="hidden" name="valores"  value="<?php echo $DatosProducto['id'];?>">
+					cotizar
+				</button>
+				<button class="buttom cotizado" id="agregado<?php echo $DatosProducto['id'];?>">
+					Agregado
+				</button>
 
 			</div>
 
 		</div>
 		<div class="body-panel">
 			<div class="row text-center">
-				<h3>Informacion Adicional</h3>
-
+                <?php require 'informacionAdicional.php'; ?>
 			</div>
 
 		</div>

@@ -30,14 +30,16 @@ $blog= $Blog->blog();
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+    <base href="../" />
 
 	<title>Corporación Chamluci - Líderes en línea institucional</title>
 	<!--<script src="assets/js/apiProcess.js" ></script>-->
-	<?php 
+<?php 
 
 require 'includes/style.php';
 
 ?>
+
 </head>
 <body id="body" onresize="responsive();">
 <!-- start custom menu-->	
@@ -58,24 +60,14 @@ require 'includes/slider-little.php'
 		<div class="body-panel">
 			
 			<div class="col-1-2 form width-70 width-100-responsive">
-				<div class="col shadow">
 					<img src="assets/images/blog-img.png" alt="">
-					<div class="contenido">
-					<h3>titulo del articulo destacado</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-					<button class="buttom">
-					Ver mas
-					<i class="fa fa-angle-double-right"></i>
-					</button>
-
-					</div>
+					
 					
 				
 
-				</div>
 
 				<div class="header-panel">
-					<h1>
+					<h1 class="margin-left-10">
 						Articulos
 					</h1>
 					<div class="separador1 margin-left-none margin-right-none width-100">
@@ -83,77 +75,24 @@ require 'includes/slider-little.php'
 						<span class="separator-right bg-primary"></span>
 					</div>
 				</div>
-				<div class="articulos" id="articulos">
 
-<?php
-for ($i= 1; $i<=4; $i++)
-{
-?>	
-				<div class="col-1-2  background-white-two margin-top">
-					<img src="assets/images/blog-img.png " alt="">
+<div class="margin-Top-Button paddin">
+Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-					<h3>
-						nombre del articulo <?php echo $i; ?>
-					</h3>
-					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-					</p>
-					<a class="buttom" href="Articulo/">
-					Ver mas
-					<i class="fa fa-angle-double-right"></i>
-</a>
-				</div>
+The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 
-<?php
-}
-?>
-
-<div class="col text-center background-none">
-
-<div class="centrado">
-	
-<ul class="custom-pagination pagination ">
-
-	<a><li class="disabled atras">
-		«
-	</li></a>
-
-	<li class="active">
-		<a>1</a>
-	</li>
-
-	<a href="">
-		<li>
-		2
-		</li>
-	</a>
-
-	<a href="">
-		<li>
-		3
-		</li>
-	</a>
-
-	<a href="">
-		<li>
-		4
-		</li>
-	</a>
-
-	<a href="">
-		<li class="adelante">
-		»
-		</li>
-	</a>
-
-</ul>
 
 </div>
-	
-</div>
+
+<blockquote>
+	<p>
+	The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.	
+	</p>
+
+</blockquote>
+
 				
 </div>
-			</div>
 			
 			<div class="col-1-2 width-30">
 			<h4>

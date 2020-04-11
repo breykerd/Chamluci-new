@@ -11,7 +11,7 @@
 					
 				</div>
 					<div class="redes-sociales">
-						<i class="fa fa-facebook-square iconSocial"></i>
+						<i class="fa fa-facebook-square iconSocial"> </i>
 						<i class="fa fa-twitter iconSocial"></i>
 						<i class="fa fa-youtube iconSocial"></i>
 						<i class="fa fa-instagram iconSocial"></i>
@@ -28,17 +28,28 @@
 				</div>
 
 				<?php 
-for ($i= 1; $i<=2; $i++)
+for ($i= 0; $i<2; $i++)
 {
 ?>				
 				 
 				<div class="container">
 				<div class="sub-col-1">
-					<img src="assets/images/imagen-4.png" alt="">
+				<a href="Producto/<?php echo $productosPie[$i]['id'].'-'.$productosPie[$i]['url']; ?>">
+
+<img 
+class="lazy" src="assets/images/loading.webp" 
+	 data-src="<?php echo $urlImg.$productosPie[$i]['img1']; ?>" 
+	 data-srcset="<?php echo $urlImg.$productosPie[$i]['img1']; ?>" 
+title="<?php echo $productosPie[$i]['titulo']; ?>" 
+alt="<?php echo $productosPie[$i]['titulo']; ?>" 
+
+ rel="noopener">
+</a>
 				</div>
 				<div class="sub-col-2">
-					<h4>Nombre del producto extremadamente largo <?php echo $i; ?></h4>
-					<a href="#" class="text-primary"> Ver Más</a>
+					<h4><a href="Producto/<?php echo $productosPie[$i]['id'].'-'.$productosPie[$i]['url']; ?>"><?php echo $productosPie[$i]['titulo']; ?>
+</a></h6></h4>
+					<a href="Producto/<?php echo $productosPie[$i]['id'].'-'.$productosPie[$i]['url']; ?>" class="text-primary"> Ver Más</a>
 				</div>
 				</div>
 				<?php }; ?>
@@ -56,7 +67,25 @@ for ($i= 1; $i<=2; $i++)
 				</div>
 
 				<?php 
-$contenido= array("Av. Santa Rosa # 424 - Santa Anita - Lima - Perú","01 - 478 0646","ventas@corporacionchamluci.com","947153316 / 934717709");	
+$numeros=explode('/',$contacto['tel2']);
+$random=array_rand($numeros);
+$comparador = $mysqli->query("SELECT comparador FROM emailRandom ");
+$row = mysqli_fetch_assoc($comparador);
+$compara=intval($row['comparador']);
+if($compara==1){
+	$telefonos=$numeros['0']." / ".$numeros['1']." / ".$numeros['2']." / ".$numeros['3']." / ".$numeros['4'];
+	$consulta = $mysqli->query("UPDATE emailRandom SET comparador='0' WHERE id='1' ");
+
+}else{
+	$telefonos=$numeros['1']." / ".$numeros['0']." / ".$numeros['2']." / ".$numeros['3']." / ".$numeros['4'];
+	$consulta = $mysqli->query("UPDATE emailRandom SET comparador='1' WHERE id='1' ");
+
+}
+
+
+
+
+$contenido= array($contacto['direccion'], $contacto['tel1'],$contacto['correo'], $telefonos);	
 $icons= array("fa-map-marker","fa-phone","fa-envelope-o","fa-whatsapp");
 
 for ($i= 0; $i<=3; $i++)
@@ -67,7 +96,26 @@ for ($i= 0; $i<=3; $i++)
 							<i class="fa <?php echo $icons[$i]; ?>"> </i>
 					</div>
 					<div class=sub-col-2>
-					<a href=""><?php echo $contenido[$i]; ?></a>
+					<?php if($i == 1 || $i == 2 ){
+						if($i== 1){
+							$href="tel:";
+						}else{
+							$href="mailto:";
+
+						}
+
+
+
+					
+					
+					?>
+
+					<a href="<?php echo $href.$contenido[$i]; ?>">
+						<?php echo $contenido[$i]; ?>
+					
+					</a>
+
+					<?php }else{ echo $contenido[$i]; }; ?>
 					</div>
 
 				</div>

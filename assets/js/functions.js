@@ -154,8 +154,6 @@ function mostrarOcultarSubMenu(){
 		children.classList.add('children');
 		children.classList.remove('children-visibilite');
 	}
-
-
 }
 
 function ocultaSubMenu(){
@@ -193,19 +191,27 @@ document.addEventListener("DOMContentLoaded", function() {
   
   
   
+
+
+
+
   //carrito de cotizacion
 
 //compara los arrays para ver si ya el producto esta en el carrito
 // de no estarlo lo agrega
   function compararArrays(idProducto){
 	var producto=idProducto;
+
 	if (sessionStorage.productos!=undefined) {
 	var productos= sessionStorage.productos.split(",");
 	}else{
 		agregarCarrito(idProducto);
+		var productos= sessionStorage.productos.split(",");
+
 	}
+
+
 	var encuentra = false;
-	
 		for(var j =0; j < productos.length;j++){
 			 if(producto == productos[j]){
 				 encuentra = true;
@@ -232,7 +238,9 @@ sessionStorage.productos = producto;
 var idProductos = [idProducto];
 var productos= idProductos.join();
 sessionStorage.productos = productos;
-    }
+	}
+	
+
     botones();
 };
 
@@ -242,34 +250,23 @@ sessionStorage.productos = productos;
 function botones(){
 
     if (sessionStorage.productos!=undefined) {
+
 var producto= sessionStorage.productos.split(",");
 var valores = document.getElementsByName('valores');
 
 for(var i =0; i < valores.length; i++){
     
-
-
     for(var j =0; j < producto.length;j++){
-
 
 	var cotizar = document.getElementById('cotizar'+valores[i]['value']);
 	var agregado = document.getElementById('agregado'+valores[i]['value']);	
 
-
          if(valores[i]['value'] == producto[j]){
-			 console.log(producto[j]);
             	cotizar.style.display="none";
-				agregado.style.display="block"
-				agregado.style.marginLeft="15%";          
-         }else{
-			
-				cotizar.style.display="block";
-				cotizar.style.marginLeft="25%";
-                agregado.style.display="none"           
-
+				agregado.style.display="block";
+				agregado.style.marginLeft="15%";        
+		 }
     }
-    }
-
     }
 iconoCarro();
 }else{

@@ -89,6 +89,13 @@ a{
 	margin-bottom: 50px;
 }
 
+.paddin{
+	padding-top: 70px !important;
+	padding-bottom: 70px !important;
+	padding-left: 50px !important;
+	padding-right: 50px !important;
+}
+
 .col-1-2.padding-p{
 
 	 padding: 40px !important;
@@ -98,7 +105,7 @@ a{
 	width: 70%;
 }
 .width-70{
-	width: 70% !important;
+	width: 65% !important;
 }
 .width-90{
 	width: 90% !important;
@@ -109,7 +116,7 @@ a{
 }
 
 .width-30{
-	width: 26% !important;
+	width: 30% !important;
 }
 
 .col-offset-1{
@@ -127,6 +134,8 @@ a{
 .margin-top-none{
 	margin-top: 0 !important;
 }
+
+
 
 /* fin configuracion inicial*/
 
@@ -693,6 +702,7 @@ position: relative;
 	font-size: 30px;
 	color: @colorPrimaryTwo;
 }
+
 }
 
 .body-panel{
@@ -800,6 +810,12 @@ position: relative;
 
 /* columnas personalizadas */
 
+.col{
+	width: 100%;
+}
+
+
+
 .col-1-4{
 	position: relative;
 	justify-content: center;
@@ -852,7 +868,7 @@ position: relative;
 	}
 	.header-panel{
 		h1{
-			font-size: 24px !important;
+			font-size: 24px;
 		}
 	}
 }
@@ -867,11 +883,12 @@ position: relative;
 	//.shadow;
 	.header-panel{
 		h1{
-			font-size: 24px !important;
+			font-size: 24px;
 		}
 		p{
 			font-size: 15px !important;
 			text-align: justify;
+			line-height: 150%;
 		}
 		img{
 			margin-top: 30px;
@@ -888,6 +905,7 @@ position: relative;
 	margin: 1%;
 	h4{
 		font-size: 20px !important;
+		margin-left: 10%;
 	}
 	ul{
 		margin: 0;
@@ -914,8 +932,16 @@ position: relative;
 	background-color: @colorSecundarythree;
 	}
 }
+.width-60{
+ h1{
+	 margin-left: 10%;
+ }
+}
 
 .width-30{
+	h4{
+		margin-left: 10%;
+	}
 	ul{
 		margin: 0;
 		list-style: none;
@@ -944,6 +970,10 @@ position: relative;
 
 .margin-left-none{
 	margin-left: 0 !important;
+}
+
+.margin-left-10{
+	margin-left: 10%;
 }
 
 .margin-right-none{
@@ -991,6 +1021,20 @@ padding-bottom: 10px;
 		width: 90%;
 		margin-left: 5%;
 	}
+}
+
+.col-1-2-img{
+		
+	position: relative;
+	float: left;
+	height: 100%;
+	width: 48%;
+	margin: 1%;
+	margin-bottom: 30px;
+	p{
+		margin: 3% !important;
+	}
+
 }
 
 .Categorias.col-1-4{
@@ -1217,6 +1261,11 @@ width: 90%;
 				float: left;
 				padding-top: 15px;
 				margin-left: 10px;
+				margin: 0;
+					padding-left: 0;
+					padding-bottom: 5%;
+					font-size: 13px;
+					font-weight: bold;
 				& a{
 					margin: 0;
 					padding-left: 0;
@@ -1252,7 +1301,7 @@ width: 90%;
 	margin-top: 30px;
 	height: 264px;
 	background-repeat: no-repeat;
-	background-size:auto;
+	background-size:cover;
 	background-image: url('../images/Degradado-1.png') ;
 	img{
 		width: 15%;
@@ -1265,7 +1314,7 @@ width: 90%;
 	}
 
 .col-1-2{
-	width: 47% !important;
+	width: 47% ;
 	padding-bottom: 2%;
 
 }
@@ -1339,6 +1388,7 @@ footer{
 .cotizado{
 	 background-color: @colorSecundaryOne !important;
 	 pointer-events: none;
+	 display: none;
 }
 /* fin estilo de boton call to action */
 
@@ -1369,7 +1419,7 @@ footer{
 	text-align: center !important;
 }
 .background-none{
-	background-color: transparent;
+	background-color: transparent !important;
 }
 
 /* color primario */
@@ -1387,6 +1437,10 @@ footer{
 .background-primary{
 	background-color: @colorPrimaryOne !important;
 
+}
+
+.background-white-two{
+	background-color: @colorSecundaryTwo;
 }
 
 .text-primary-two{
@@ -1600,6 +1654,7 @@ display:none;
   }
 
   .combo-Input{
+	  width: 100%;
 	  i{
 	
     background-color: #afca52;
@@ -1696,3 +1751,155 @@ display: flex;
 		}
 	}
 
+	.col{
+		background-color: @colorSecundaryTwo;
+		display: flex;
+		img{
+			width: 40%;
+			float: left;
+			margin-left: 0;
+			margin-bottom: 0;
+			vertical-align: text-top;
+		}
+		.contenido{
+			float: left;
+			
+			h3{
+			width: 100%;
+			font-size: 20px;
+			padding-left: 15px;
+			margin-bottom: 5px;
+			
+			
+		}
+		p{
+			width: 90%;
+			padding-left: 15px;
+			font-size: 10px;
+			margin-bottom: 0;
+		}
+		.buttom{
+			height: auto;
+			border-radius: 15px 0 15px 0;
+			margin-left: 15px;
+			margin-bottom: 5px;
+
+			i{
+				font-size: 25px !important;
+				padding: 0 !important;
+			}
+		}
+		}
+		
+	}
+	.articulos{
+		.col-1-2{
+			img{
+				width: 100%;
+				margin-left: 0;
+				
+			}
+			h3{
+				width: 100%;
+				font-size: 20px;
+				padding-left: 15px;
+				
+				
+			}
+			p{
+				width: 90%;
+				font-size: 14px;
+				padding-left: 15px;
+			}
+			.buttom{
+				height: auto;
+				border-radius: 15px 0 15px 0;
+				margin-left: 15px;
+	
+				i{
+					font-size: 25px !important;
+					padding: 0 !important;
+				}
+			}
+		}
+	}
+
+	.pagination{
+		position: relative;
+		.atras{
+			border-radius: 0 0 0 15px;
+		}
+		.adelante{
+			border-radius: 0 15px 0 0;
+		}
+		
+		li{
+			display: inline;
+			background-color: @colorSecundaryOne;
+			background-size: cover;
+			padding: 10px;
+			font-size: 18px;
+			&:hover{
+				background-color: @colorPrimaryTwo;
+
+			}
+			a{
+				padding: 10px;
+				margin-top: 15px;
+				
+
+
+			}
+		}
+		.active{
+			background-color: @colorPrimaryTwo;
+		}
+		.disabled{
+			cursor: not-allowed;
+		}
+		
+	}
+	.centrado{
+		position: relative;
+	}
+	
+
+blockquote {
+    padding: 16px 20px 16px 80px;
+    font-size: 18px;
+    font-style: italic;
+    color:@colorSecundaryOne;
+    margin: 40px 0;
+    border-left: none;
+    line-height: 20px;
+    position: relative;
+    background:@colorSecundaryTwo;
+    clear: both;
+	width: 90%;
+	border-radius: 20px;
+	&::before
+		{
+			content: '\f10d';
+			font-family: FontAwesome;
+			color: @colorSecundaryOne;
+			font-size: 35px;
+			position: absolute;
+			left: 20px;
+			top: 20%;
+			font-style: normal;
+		}
+		&::after
+		{
+			content: '\f10e';
+			font-family: FontAwesome;
+			color: @colorSecundaryOne;
+			font-size: 35px;
+			position: absolute;
+			left:90%;
+			top: 69%;
+			font-style: normal;
+		}
+		p{
+			width: 90%;
+		}
+	}

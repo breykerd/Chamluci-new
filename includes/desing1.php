@@ -18,7 +18,7 @@
 	
 
 
-		<div class="body-panel margin-top-none">
+		<div class="body-panel margin-top">
 		<div class="row horizontal shadow">
 
 			<div class="col-1-2 ">
@@ -29,9 +29,17 @@
                         alt="<?php echo $DatosProducto['titulo']; ?>">
 			</div>
 
-			<div class="col-1-2  border padding-p">
+			<div class="col-1-2  border padding-p ">
                     <h2>Descripción</h2>
-					<?php echo $DatosProducto['descripcion']; ?>
+                    <?php 
+                    
+                    if($DatosProducto['descripcion'] != ""){
+                    echo $DatosProducto['descripcion']; 
+                    }else{
+                        echo $DatosProducto['detalle'];
+                    };
+                    
+                    ?>
 			</div>
 
 
@@ -39,15 +47,23 @@
 		</div>
 
         <div class="body-panel width-80 col-offset-1">
-		<div class="row horizontal shadow">
+		<div class="row horizontal shadow text-center">
+        <?php 
+         if($DatosProducto['descripcion'] != ""){
+            
+                    ?>
 
 			<div class="col-1-2  border padding-p">
             <h2>Características</h2>
 
 					<?php echo $DatosProducto['detalle']; ?>
             </div>
-            <div class="col-1-2 ">
-                <h2>información Adicional</h2>
+
+            <?php 
+                   }; ?>
+            <div class="col-1-2 width-100 text-center">
+                <h2 class="text-center">información Adicional</h2>
+                <?php require 'informacionAdicional.php'; ?>
 			</div>
 
 			
@@ -68,11 +84,13 @@
 				<button class="buttom cotizado" id="agregado<?php echo $DatosProducto['id'];?>">
 					Agregado
 				</button>
+
 			</div>
 
 		</div>
 		<div class="body-panel">
 			<div class="row text-center">
+
                 <?php require 'informacionAdicional.php'; ?>
 
 			</div>

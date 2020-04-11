@@ -23,6 +23,9 @@ $laEmpresa =new laEmpresa();
 
 $categoryList = $Category->categoryList();
 $featuredProducts = $Products->featuredProducts();
+$productosPie= $Products->productosPie();
+$contacto= $laEmpresa->contacto();
+
 
 $laempresa=$laEmpresa->Empresa();
 
@@ -40,12 +43,11 @@ $subDescripciones = explode ("|", $detalles, 2);
 
 	<title>Corporación Chamluci - Líderes en línea institucional</title>
 	<!--<script src="assets/js/apiProcess.js" ></script>-->
-	<link rel="icon" href="assets/images/favicon.ico" type="image/ico">
-	<link rel="stylesheet/less" type="text/css" href="assets/css/style.less?value=<?php echo rand(5,12);?>" />
-	<link rel="stylesheet/less" type="text/css" href="assets/css/responsive.less?value=<?php echo rand(5,12);?>?value=" />
-	<link rel="stylesheet/less" type="text/css" href="assets/fonts/fontawesome/css/font-awesome.min.css" />
-	<script src="assets/js/less.min.js" ></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<?php 
+
+require 'includes/style.php';
+
+?>
 </head>
 <body id="body" onresize="responsive();">
 <!-- start custom menu-->	
@@ -76,7 +78,7 @@ require 'includes/slider-little.php'
 				<h4>
 					Redes Sociales
 				</h4>
-				<div class="separador1">
+				<div class="separador1 margin-left-none">
 					<i class="fa fa-object-ungroup text-primary"></i> <span class="separator-right bg-primary"></span>
 				</div>
 				<div>

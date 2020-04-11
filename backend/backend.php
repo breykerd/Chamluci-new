@@ -41,6 +41,45 @@ class laEmpresa extends Conexion
     }
 }
 
+//class que controla todos los datos del Blog
+
+class Blog extends Conexion
+{
+	 public function blog()
+    {
+        $mysqli= new Conexion();
+        $resultadoBlog=$mysqli->query("SELECT * FROM blog");
+        while($resultadoblog=$resultadoBlog->fetch_assoc())
+        {
+            $listaBlog[]=$resultadoblog;
+        };
+        return $listaBlog;
+        $listaBlog->free();
+        mysqli::close;
+    }
+
+    public function blogReciente()
+    {
+        $mysqli= new Conexion();
+        $resultadoBlogRecientes=$mysqli->query("SELECT * FROM blog order by id desc");
+        while($resultadoBlogReciente=$resultadoBlogRecientes->fetch_assoc())
+        {
+            $listaBlogReciente[]=$resultadoBlogReciente;
+        };
+        return $listaBlogReciente;
+        $listaBlogReciente->free();
+        mysqli::close;
+    }
+
+      public function blogIndividual($id)
+    {
+        $mysqli= new Conexion();
+        $resultadoBlogIndividual=$mysqli->query("SELECT * FROM blog where id='$id' ");
+        return $resultadoblogIndividual=$resultadoBlogIndividual->fetch_assoc();
+        $resultadoblogIndividual->free();
+        mysqli::close;
+    }
+}
 
 //class category
 class Category extends Conexion{
@@ -138,5 +177,3 @@ class Products extends Conexion
     
 }
 
-
-?>

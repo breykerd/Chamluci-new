@@ -17,6 +17,7 @@ $idCategoria= $idRelativo[0];
 //clases requeridas
 $Category= new Category();
 $Products= new Products();
+$laEmpresa =new laEmpresa();
 
 //funciones Utilizadas
 
@@ -24,6 +25,8 @@ $categoryList = $Category->categoryList();
 $datosCategoria = $Category->datosCategoria($idCategoria);
 $featuredProducts = $Products->featuredProducts();
 $ProductCategory = $Products->productosCategoria($idCategoria);
+$contacto= $laEmpresa->contacto();
+$productosPie= $Products->productosPie();
 
 ?>
 
@@ -35,12 +38,11 @@ $ProductCategory = $Products->productosCategoria($idCategoria);
 
 	<title>Corporación Chamluci - Líderes en línea institucional</title>
 	<!--<script src="assets/js/apiProcess.js" ></script>-->
-	<link rel="icon" href="assets/images/favicon.ico" type="image/ico">
-	<link rel="stylesheet/less" type="text/css" href="assets/css/style.less?value=<?php echo rand(5,12);?>" />
-	<link rel="stylesheet/less" type="text/css" href="assets/css/responsive.less?value=<?php echo rand(5,12);?>?value=" />
-	<link rel="stylesheet/less" type="text/css" href="assets/fonts/fontawesome/css/font-awesome.min.css" />
-	<script src="assets/js/less.min.js" ></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<?php 
+
+require 'includes/style.php';
+
+?>
 </head>
 <body id="body" onresize="responsive();">
 <!-- start custom menu-->	
@@ -161,7 +163,7 @@ if($cantidadRespuesta < 8 ){
 
 
 				</h2>
-				<button class="buttom"  id="cotizar<?php echo $ProductCategory[$i]['id'];?>" onClick="compararArrays(<?php echo $ProductCategory[$i]['id']; ?>)">
+				<button class="buttom margin-top-none"  id="cotizar<?php echo $ProductCategory[$i]['id'];?>" onClick="compararArrays(<?php echo $ProductCategory[$i]['id']; ?>)">
 				<input type="hidden" name="valores"  value="<?php echo $ProductCategory[$i]['id'];?>">
 					cotizar
 				</button>
