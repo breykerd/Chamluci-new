@@ -190,16 +190,84 @@ switch ($funcion) {
 
         case "ProductosParaCarrito":
         if (isset($_GET['id'])) {
-            $id=$_GET['id'];
-        }
-            $datosProducto = $mysqli->query("SELECT * FROM productos WHERE id='$id'" );
-                $ProductosParaCarrito=mysqli_fetch_assoc($datosProducto);
-                echo json_encode($ProductosParaCarrito);
+			$id=$_GET['id'];
+			$datos = explode(",", $id );
+		}
+
+		$productos="";
+		$cantidad = count($datos);
+
+		for($i=0; $i < $cantidad; $i++){
+			$datosProducto = $mysqli->query("SELECT * FROM productos WHERE id = $datos[$i]" );
+			$ProductosParaCarrito=mysqli_fetch_assoc($datosProducto);
+
+
+$productos= $productos.
+'<div class="col border shadow  cotizacion">
+			<img src="adminchamluci/img/'.$ProductosParaCarrito["img1"].'"  alt="">
+				<p>'.$ProductosParaCarrito["titulo"].'</p>
+				<div class="cantidads">
+					<p>cantidad</p>
+					<input type="number" value="1" id="cantidad-'.$ProductosParaCarrito["id"].'" onkeyup="cambiarValor('.$ProductosParaCarrito["id"].');">
+					<input type="hidden" name="idhidden" id="idhidden-'.$ProductosParaCarrito["id"].'" value="1">
+				</div>
+				<button class="buttom" onclick="eliminarProducto('.$ProductosParaCarrito["id"].');">
+					Eliminar
+				</button>
+		</div>
+		</br>';
+			
+		}
+		echo $productos;
+            
               
 
         break;
-//guarda el correo de suscripcion
-        case "suscribirse":
+
+
+case "prubacotizacion";
+		if(isset($_GET['datosFormulario'])){
+			$datos = explode("," ,$_GET['datosFormulario']);
+			$send = true;
+		}else{
+			$send = false;
+			echo "datos no recibidos";
+		}
+
+		if($send==true){
+$texto = "Que Tal ".$datos[1]." Su cotización fue enviada Satisfactoriamente ";
+
+			$mensaje = [
+				"estado"=> "1",
+				"mensaje"=>$texto,
+				"mensajeTwoModal"=>"Lo invitamos a ver nuestras otras categorías de productos"
+			];
+
+			echo json_encode($mensaje);
+		}else{
+$texto = "Que Tal ".$datos[1]." La Cotización no pudo ser enviada ";
+
+			$mensaje = [
+				"estado"=> "2",
+				"mensaje"=>$texto,
+				"mensajeTwoModal"=>"lo invitamos a intentar nuevamente el envió de la cotización o a comunicarse con nuestra central"
+			];
+
+			echo json_encode($mensaje);
+		}	
+
+
+break;
+
+
+
+
+
+
+		//guarda el correo de suscripcion
+
+
+case "suscribirse":
         if (isset($_GET['correo'])) {
             $correo=$_GET['correo'];
         }
