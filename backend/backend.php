@@ -81,6 +81,34 @@ class Blog extends Conexion
     }
 }
 
+
+//class Ofertas
+
+class Ofertas extends Conexion{
+	public function ofertasDelMes(){
+		
+		$fecha = date("Y-m-d");
+
+		$mysqli = new Conexion();
+		$resultadoOfertas=$mysqli->query("SELECT * FROM ofertas WHERE fechaFinal >= '$fecha' AND fechaInicio >= '$fecha' ");
+$filas =  	$resultadoOfertas->num_rows;
+ if($filas != 0){
+
+ 
+		while($resultadoOferta=$resultadoOfertas->fetch_assoc())
+        {
+            $listaOfertas[]=$resultadoOferta;
+        };
+        return $listaOfertas;
+		
+}else{
+	return $filas;
+}
+
+	}
+}
+
+
 //class category
 class Category extends Conexion{
     //lista de categorias

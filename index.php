@@ -6,6 +6,7 @@ require('backend/backend.php');
 $Category= new Category();
 $Products= new Products();
 $laEmpresa =new laEmpresa();
+$Ofertas = new Ofertas();
 
 
 //funciones Utilizadas
@@ -14,7 +15,8 @@ $categoryList=$Category->categoryList();
 $featuredProducts=$Products->featuredProducts();
 $productosPie= $Products->productosPie();
 $contacto= $laEmpresa->contacto();
-
+$ofertasDelMes = $Ofertas->ofertasDelMes();
+//echo count($ofertasDelMes);
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +85,7 @@ require 'includes/header.php';
 <div class="container">
 	<div class="row">
 		<div class="header-panel text-center">
-			<h2>Ofertas del Mes</h2>
+			<h2>Ofertas del Mes </h2>
 			<div class="separador">
 				<span class="separator-left"></span>
 				<i class="fa fa-object-group fa-2x"></i>
@@ -92,14 +94,49 @@ require 'includes/header.php';
 		</div>
 		<div class="body-panel">
 			<div class="columna-1">
+<?php
 
+
+
+for($i = 0; $i < count($ofertasDelMes); $i++ ){
+	if($ofertasDelMes[$i]['posicionOferta']==1){
+
+	
+?>
+<img src="adminchamluci/img/<?php echo $ofertasDelMes[$i]['imgOferta'] ?> " alt="">
+<?php
+}
+}
+?>
 			</div>
 			<div class="columna-2">
 				<div class="fila-1">
+				<?php 
+for($i = 0; $i < count($ofertasDelMes); $i++ ){
+	if($ofertasDelMes[$i]['posicionOferta'] == 2){
 
+	
+?>
+<img src="adminchamluci/img/<?php echo $ofertasDelMes[$i]['imgOferta'] ?> " alt="<?php echo $ofertasDelMes[$i]['nombreOferta'] ?>">
+<?php
+}
+}
+
+?>
 				</div>
 				<div class="fila-2">
+				<?php 
+for($i = 0; $i < count($ofertasDelMes); $i++ ){
+	if($ofertasDelMes[$i]['posicionOferta'] == 3){
 
+	
+?>
+<img src="adminchamluci/img/<?php echo $ofertasDelMes[$i]['imgOferta'] ?> " alt="">
+<?php
+}
+}
+
+?>
 				</div>
 
 			</div>
