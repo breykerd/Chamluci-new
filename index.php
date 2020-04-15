@@ -6,6 +6,7 @@ require('backend/backend.php');
 $Category= new Category();
 $Products= new Products();
 $laEmpresa =new laEmpresa();
+$Ofertas = new Ofertas();
 
 
 //funciones Utilizadas
@@ -14,7 +15,10 @@ $categoryList=$Category->categoryList();
 $featuredProducts=$Products->featuredProducts();
 $productosPie= $Products->productosPie();
 $contacto= $laEmpresa->contacto();
+$ofertasDelMesOne = $Ofertas->ofertasDelMesOne();
+$ofertasDelMesTwo = $Ofertas->ofertasDelMesTwo();
 
+//echo var_dump($ofertasDelMes);
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +27,6 @@ $contacto= $laEmpresa->contacto();
 	<meta charset="UTF-8">
 
 	<title>Corporación Chamluci - Líderes en línea institucional</title>
-	<!--<script src="assets/js/apiProcess.js" ></script>-->
 	<?php 
 
 require 'includes/style.php';
@@ -83,7 +86,7 @@ require 'includes/header.php';
 <div class="container">
 	<div class="row">
 		<div class="header-panel text-center">
-			<h2>Ofertas del Mes</h2>
+			<h2>Ofertas del Mes </h2>
 			<div class="separador">
 				<span class="separator-left"></span>
 				<i class="fa fa-object-group fa-2x"></i>
@@ -92,14 +95,33 @@ require 'includes/header.php';
 		</div>
 		<div class="body-panel">
 			<div class="columna-1">
-
+<?php
+if($ofertasDelMesOne!= 0){
+?>
+<img src="adminchamluci/img/<?php echo $ofertasDelMesOne[0]['imgOferta'] ?> " alt="<?php echo $ofertasDelMesOne[0]['nombreOferta'] ?>">
+<?php
+}
+?>
 			</div>
 			<div class="columna-2">
 				<div class="fila-1">
-
+<?php 
+if($ofertasDelMesTwo!= 0){
+?>
+<img src="adminchamluci/img/<?php echo $ofertasDelMesTwo[0]['imgOferta'] ?> " alt="<?php echo $ofertasDelMesTwo[0]['nombreOferta'] ?>">
+<?php
+}
+?>
 				</div>
 				<div class="fila-2">
+<?php 
+if($ofertasDelMesTwo!= 0){
 
+?>
+<img src="adminchamluci/img/<?php echo $ofertasDelMesTwo[1]['imgOferta'] ?> " alt="<?php echo $ofertasDelMesTwo[1]['nombreOferta'] ?>">
+<?php
+}
+?>
 				</div>
 
 			</div>

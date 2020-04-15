@@ -289,3 +289,215 @@ function iconoCarro(){
 		carrito.innerText ="0";
 	}
 	};
+
+
+
+
+areaCotizacion();
+
+
+	function areaCotizacion(){
+		
+		noProductos = document.getElementById('noProductos');
+		panelCotizacion = document.getElementById('cotizacion');
+
+		if(sessionStorage.productos!=undefined){
+			noProductos.style.display = 'none';
+			mostrarProductosCarrito();
+
+		}else{
+
+			//mostrarMensajeNoProductos();
+			panelCotizacion.style.display = 'none';
+			noProductos.style.display = 'block';
+
+		}
+	}
+
+
+
+	function mostrarProductosCarrito(){
+		
+		var nProductos= sessionStorage.productos.split(",");
+		var contenedor = document.getElementById('productos');
+		
+
+		var request = new XMLHttpRequest();
+		var id=nProductos;	
+		var url = 'backend/backend.php?funcion=ProductosParaCarrito&id='+id;
+
+		request.open('GET', url, true);
+		request.send();
+		request.onreadystatechange = function (){
+				if(this.readyState == 4 && this.status == 200){
+					contenedor.innerHTML = this.responseText;
+					cargando = document.getElementById('cargando');
+					cargando.style.display = 'none';
+				}else{
+					//console.log('cargando')
+				}
+		};
+		};
+		
+	function cambiarValor(id){
+		var valor = document.getElementById('cantidad-'+id).value;
+		var valorhidden = document.getElementById('idhidden-'+id);
+		valorhidden.value = valor;
+
+	}
+
+	function enviarMensajeCotizacion(){
+		var nProductos= sessionStorage.productos.split(",");
+		var cantidadProductos =nProductos.length;
+		var valores= new Array();
+		var datosFormulario= new Array();
+		var mensajeModal = document.getElementById('mensajeModal');
+		var mensajeTwoModal = document.getElementById('mensajeTwoModal');
+		
+		for (i = 0; i < cantidadProductos; i++) {
+			valores.push(document.getElementById('idhidden-'+nProductos[i]).value);
+			
+		}
+		datosFormulario.push(document.getElementById('ruc').value);
+		datosFormulario.push(document.getElementById('nombre').value);
+		datosFormulario.push(document.getElementById('correo').value);
+		datosFormulario.push(document.getElementById('telefono').value);
+		datosFormulario.push(document.getElementById('mensaje').value);
+
+		var url = 'backend/backend.php?funcion=prubacotizacion&idProductos='+nProductos+'&cantidades='+valores+'&datosFormulario='+datosFormulario;
+		var request = new XMLHttpRequest();
+
+		request.open('GET', url, true);
+		request.send();
+
+		request.onreadystatechange = function (){
+			if(this.readyState == 4 && this.status == 200){
+				mensaje = JSON.parse(this.responseText);
+				if(mensaje.estado == 1){
+					mensajeModal.innerHTML = mensaje.mensaje;
+					mensajeTwoModal.innerHTML = mensaje.mensajeTwoModal;
+					MensajeModal(1);
+
+				}else{
+					mensajeModal.innerHTML = mensaje.mensaje;
+					mensajeTwoModal.innerHTML = mensaje.mensajeTwoModal;
+					MensajeModal(2);
+				}
+
+			}else{
+				//console.log('cargando')
+			}
+	};
+
+	}		
+
+
+	function vaciarCarrito(){
+		sessionStorage.clear();
+		iconoCarro();
+		};
+
+
+
+
+		function eliminarProducto(id){
+			var nProductos= sessionStorage.productos.split(",");
+			id=id.toString();
+			var index = nProductos.indexOf(id);
+
+
+		if (index > -1) {
+		   nProductos.splice(index, 1);
+		}
+		var productos= nProductos.join();
+		sessionStorage.productos = productos;
+
+
+		if (sessionStorage.productos == "") {
+			sessionStorage.clear();
+			iconoCarro();
+		}
+
+		areaCotizacion();
+		iconoCarro();
+
+		}
+
+
+
+
+
+
+	//Area Del Blog
+	setTimeout('paginarBlog(1);',700); 
+
+	function paginarBlog(page){
+		var contenedor = document.getElementById('articulos');
+		var url = 'includes/paginacionBlog.php?page='+page;
+
+		var request = new XMLHttpRequest();
+
+		request.onreadystatechange = function(){
+			if(request.readyState === 4){
+				contenedor.innerHTML = request.responseText;
+			}else{
+			}
+		}
+
+		request.open('GET' , url);
+		request.send();
+
+	}
+
+
+
+
+
+
+function MensajeModal(estado){
+	
+		var modal = document.getElementById("tvesModal");
+		var btn = document.getElementById("btnModal");
+		var span = document.getElementsByClassName("close")[0];
+		var body = document.getElementsByTagName("body")[0];
+		var modalContent = document.getElementById("modal-content");
+		var close = document.getElementById("close");
+
+
+		if(estado == 1){
+			modalContent.style.borderTop = "10px solid #afca52"
+			close.style.color="#afca52"
+		}else{
+			modalContent.style.borderTop = "10px solid #a94442"
+			close.style.color="#a94442"
+		}
+		
+		modal.style.display = "block";
+
+			body.style.position = "static";
+			body.style.height = "100%";
+			body.style.overflow = "hidden";
+		
+
+		span.onclick = function() {
+			modal.style.display = "none";
+
+			body.style.position = "inherit";
+			body.style.height = "auto";
+			body.style.overflow = "visible";
+		}
+
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+
+				body.style.position = "inherit";
+				body.style.height = "auto";
+				body.style.overflow = "visible";
+			}
+		}
+	}
+
+
+
+	
