@@ -25,7 +25,7 @@ Gestor de base de datos MySql
 _clona el repositorio con el siguiente comando_
 
 ```
-gir clone https://github.com/breykerd/Chamluci-new.git
+git clone https://github.com/breykerd/Chamluci-new.git
 ```
 ```
 Importa la base de datos que se encuentra en la carpeta DB en tu gestor de bases de datos con el nombre de newdatabase
@@ -34,7 +34,7 @@ la configuracion de user y password de tu gestor de base de datos esta en backen
 
 _desplega tu servidor local y entra a localhost/Chamluci-new_
 _el proyecto cuenta con datos precargados para visualizacion_
--si usted lo desea Puede cambiar los datos el la BD per el area de administracion de la misma no se encuentra e este proyecto
+_si usted lo desea Puede cambiar los datos el la BD per el area de administracion de la misma no se encuentra e este proyecto_
 
 
 ## Construido con 🛠️
