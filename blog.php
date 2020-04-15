@@ -85,72 +85,7 @@ require 'includes/slider-little.php'
 				</div>
 				<div class="articulos" id="articulos">
 
-<?php
-for ($i= 1; $i<=4; $i++)
-{
-?>	
-				<div class="col-1-2  background-white-two margin-top">
-					<img src="assets/images/blog-img.png " alt="">
 
-					<h3>
-						nombre del articulo <?php echo $i; ?>
-					</h3>
-					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-					</p>
-					<a class="buttom" href="Articulo/">
-					Ver mas
-					<i class="fa fa-angle-double-right"></i>
-</a>
-				</div>
-
-<?php
-}
-?>
-
-<div class="col text-center background-none">
-
-<div class="centrado">
-	
-<ul class="custom-pagination pagination ">
-
-	<a><li class="disabled atras">
-		«
-	</li></a>
-
-	<li class="active">
-		<a>1</a>
-	</li>
-
-	<a href="">
-		<li>
-		2
-		</li>
-	</a>
-
-	<a href="">
-		<li>
-		3
-		</li>
-	</a>
-
-	<a href="">
-		<li>
-		4
-		</li>
-	</a>
-
-	<a href="">
-		<li class="adelante">
-		»
-		</li>
-	</a>
-
-</ul>
-
-</div>
-	
-</div>
 				
 </div>
 			</div>
