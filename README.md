@@ -6,100 +6,67 @@ _Este proyecto se basa en la creacion de una pagina web para la empresa corporac
 
 _Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
+_Aun esta en fase de desarrollo y la base de datos no esta anexada al proyecto apoyo su comprencion y pronto sera agregada al proyecto_ 
+
 Mira **Deployment** para conocer como desplegar el proyecto.
 
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Para propositos de desarrollo y pruebas Se Recomienda Lo Siguiente_
 
 ```
-Da un ejemplo
+PHP 7.1
+Gestor de base de datos MySql
 ```
 
 ### Instalación 🔧
 
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
+_clona el repositorio con el siguiente comando_
 
 ```
-Da un ejemplo
+gir clone https://github.com/breykerd/Chamluci-new.git
+```
+```
+Importa la base de datos que se encuentra en la carpeta DB en tu gestor de bases de datos con el nombre de newdatabase
+la configuracion de user y password de tu gestor de base de datos esta en backend/connection.php
 ```
 
-_Y repite_
+_desplega tu servidor local y entra a localhost/Chamluci-new_
+_el proyecto cuenta con datos precargados para visualizacion_
+-si usted lo desea Puede cambiar los datos el la BD per el area de administracion de la misma no se encuentra e este proyecto
 
-```
-hasta finalizar
-```
-
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
-
-## Ejecutando las pruebas ⚙️
-
-_Explica como ejecutar las pruebas automatizadas para este sistema_
-
-### Analice las pruebas end-to-end 🔩
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-### Y las pruebas de estilo de codificación ⌨️
-
-_Explica que verifican estas pruebas y por qué_
-
-```
-Da un ejemplo
-```
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
 
 _Menciona las herramientas que utilizaste para crear tu proyecto_
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - El framework web usado
-* [Maven](https://maven.apache.org/) - Manejador de dependencias
-* [ROME](https://rometools.github.io/rome/) - Usado para generar RSS
+* [less](http://lesscss.org/) - Pre-procesador de texto utilizado
 
-## Contribuyendo 🖇️
 
-Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
-## Wiki 📖
+## Adicionales 📌
 
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+dentro del proyecto se encuentran todos los archivos de desarrollo para aquellos que deseen mejorar algo
+_por favor enviar sus commits para que sean evaluados y unidos a la rama principal_
 
-## Versionado 📌
+pido que no me asesinen por la estructura del codigo o la forma en como realizo los commits ya que entoy aprendiendo a trabajar profecionalmente con esta herramienta 
+y en general en el mundo de la programacion 
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/tu/proyecto/tags).
+## Autor ✒️
 
-## Autores ✒️
 
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
-
-* **Andrés Villanueva** - *Trabajo Inicial* - [villanuevand](https://github.com/villanuevand)
-* **Fulanito Detal** - *Documentación* - [fulanitodetal](#fulanito-de-tal)
-
-También puedes mirar la lista de todos los [contribuyentes](https://github.com/your/project/contributors) quíenes han participado en este proyecto. 
+* **Nelson Barroso** - *Programador* - [breykerd](https://github.com/breykerd)
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia (Tu Licencia) - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia (Tecnoblack) 
 
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
 * Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
 * Da las gracias públicamente 🤓.
-* etc.
-
-
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
+⌨️ con ❤️ por [breykerd](https://github.com/breykerd) 😊
