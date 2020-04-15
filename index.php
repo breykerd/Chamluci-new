@@ -19,7 +19,6 @@ $ofertasDelMesOne = $Ofertas->ofertasDelMesOne();
 $ofertasDelMesTwo = $Ofertas->ofertasDelMesTwo();
 
 //echo var_dump($ofertasDelMes);
-$ofertasDelMes = $Ofertas->ofertasDelMes();
 ?>
 
 <!DOCTYPE html>
