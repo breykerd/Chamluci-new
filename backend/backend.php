@@ -115,6 +115,29 @@ $filas =  	$resultadoOfertas->num_rows;
 <<<<<<< HEAD
 
 
+	public function ofertasDelMesTwo(){
+		
+		$fecha = date("Y-m-d");
+
+		$mysqli = new Conexion();
+		$resultadoOfertas=$mysqli->query("SELECT * FROM ofertas WHERE fechaFinal >= '$fecha' AND fechaInicio <= '$fecha' AND posicionOferta = 2 ORDER BY idOferta  DESC LIMIT 2");
+$filas =  	$resultadoOfertas->num_rows;
+ if($filas != 0){
+
+ 
+		while($resultadoOferta=$resultadoOfertas->fetch_assoc())
+        {
+            $listaOfertas[]=$resultadoOferta;
+        };
+        return $listaOfertas;
+		
+}else{
+	return $filas;
+}
+
+	}
+
+
 
 =======
 >>>>>>> origin
