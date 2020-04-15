@@ -15,14 +15,11 @@ $categoryList=$Category->categoryList();
 $featuredProducts=$Products->featuredProducts();
 $productosPie= $Products->productosPie();
 $contacto= $laEmpresa->contacto();
-<<<<<<< HEAD
 $ofertasDelMesOne = $Ofertas->ofertasDelMesOne();
 $ofertasDelMesTwo = $Ofertas->ofertasDelMesTwo();
 
 //echo var_dump($ofertasDelMes);
-=======
 $ofertasDelMes = $Ofertas->ofertasDelMes();
->>>>>>> origin
 ?>
 
 <!DOCTYPE html>
@@ -100,31 +97,16 @@ require 'includes/header.php';
 		<div class="body-panel">
 			<div class="columna-1">
 <?php
-<<<<<<< HEAD
 if($ofertasDelMesOne!= 0){
 ?>
 <img src="adminchamluci/img/<?php echo $ofertasDelMesOne[0]['imgOferta'] ?> " alt="<?php echo $ofertasDelMesOne[0]['nombreOferta'] ?>">
 <?php
 }
-=======
 
-
-
-for($i = 0; $i < count($ofertasDelMes); $i++ ){
-	if($ofertasDelMes[$i]['posicionOferta']==1){
-
-	
-?>
-<img src="adminchamluci/img/<?php echo $ofertasDelMes[$i]['imgOferta'] ?> " alt="">
-<?php
-}
-}
->>>>>>> origin
 ?>
 			</div>
 			<div class="columna-2">
 				<div class="fila-1">
-<<<<<<< HEAD
 <?php 
 if($ofertasDelMesTwo!= 0){
 ?>
@@ -141,33 +123,7 @@ if($ofertasDelMesTwo!= 0){
 <img src="adminchamluci/img/<?php echo $ofertasDelMesTwo[1]['imgOferta'] ?> " alt="<?php echo $ofertasDelMesTwo[1]['nombreOferta'] ?>">
 <?php
 }
-=======
-				<?php 
-for($i = 0; $i < count($ofertasDelMes); $i++ ){
-	if($ofertasDelMes[$i]['posicionOferta'] == 2){
 
-	
-?>
-<img src="adminchamluci/img/<?php echo $ofertasDelMes[$i]['imgOferta'] ?> " alt="<?php echo $ofertasDelMes[$i]['nombreOferta'] ?>">
-<?php
-}
-}
-
-?>
-				</div>
-				<div class="fila-2">
-				<?php 
-for($i = 0; $i < count($ofertasDelMes); $i++ ){
-	if($ofertasDelMes[$i]['posicionOferta'] == 3){
-
-	
-?>
-<img src="adminchamluci/img/<?php echo $ofertasDelMes[$i]['imgOferta'] ?> " alt="">
-<?php
-}
-}
-
->>>>>>> origin
 ?>
 				</div>
 
